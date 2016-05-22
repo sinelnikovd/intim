@@ -1,0 +1,762 @@
+@import "bourbon"
+@import "settings/_normalize.sass"
+@import "settings/_vars.sass"
+@import "settings/_fonts.sass"
+@import "settings/_reset.sass"
+
+@import "libs/sprite.sass"
+@import "libs/owl.carousel.sass"
+
+*
+	box-sizing: border-box
+
+*::-webkit-input-placeholder
+	color: #424242
+	opacity: 1
+
+
+*:-moz-placeholder
+	color: #424242
+	opacity: 1
+
+*::-moz-placeholder
+	color: #424242
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #424242
+	opacity: 1
+
+img
+	max-width: 100%
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #424242
+
+body input:required:valid,
+body textarea:required:valid
+	color: #424242
+
+body
+	font-size: 13px
+	min-width: 320px
+	position: relative
+	line-height: 1.42
+	font-family: Arial, $helvetica
+	font-weight: normal
+	overflow-x: hidden
+	color: #000
+	background-color: #f2f4f5
+	position: relative
+
+.container
+	max-width: 600px
+	margin: 0 auto
+	position: relative
+	padding: 0 10px
+
+.container-nobd
+	max-width: 600px
+	margin: 0 auto
+	position: relative
+
+// BEGIN TEXT 
+%bold
+	font-family: "RobotoCondensedBold", $helvetica
+%regular
+	font-family: "RobotoCondensedRegular", $helvetica
+
+.t-red
+	color: #ff0606
+
+.title
+	@extend %regular
+	font-size: 30px
+	color: #9b0303
+	text-transform: uppercase
+// END TEXT 
+
+/* icon */
+.icon
+	display: inline-block
+.icon_search
+	+sprite($s-search)
+.icon_like
+	+sprite($s-like)
+.icon_cart
+	+sprite($s-cart)
+.icon_full-site
+	+sprite($s-full-site)
+.icon_vk
+	+sprite($s-vk)
+.icon_inst
+	+sprite($s-inst)
+.icon_tw
+	+sprite($s-tw)
+.icon_od
+	+sprite($s-od)
+.icon_yt
+	+sprite($s-yt)
+.icon_develop
+	+sprite($s-develop)
+.icon_money
+	+sprite($s-money)
+.icon_quality
+	+sprite($s-quality)
+.icon_service
+	+sprite($s-service)
+.icon_time
+	+sprite($s-time)
+.icon_anonim
+	+sprite($s-anonim)
+.icon_visa
+	+sprite($s-visa)
+.icon_mascard
+	+sprite($s-mascard)
+.icon_yad
+	+sprite($s-yad)
+.icon_paypal
+	+sprite($s-paypal)
+.icon_wmr
+	+sprite($s-wmr)
+.icon_qiwi
+	+sprite($s-qiwi)
+.icon_doc
+	+sprite($s-doc)
+.icon_robokassa
+	+sprite($s-robokassa)
+.icon_next_mini
+	+sprite($s-next_mini)
+	&:hover
+		+sprite($s-next_mini_h)
+.icon_prev_mini
+	+sprite($s-prev_mini)
+	&:hover
+		+sprite($s-prev_mini_h)
+.icon_next
+	+sprite($s-next)
+	opacity: .5
+	&:hover
+		opacity: 1
+.icon_prev
+	+sprite($s-prev)
+	opacity: .5
+	&:hover
+		opacity: 1
+.icon_new
+	+sprite($s-new)
+.icon_linen
+	+sprite($s-linen)
+.icon_her
+	+sprite($s-her)
+.icon_him
+	+sprite($s-him)
+.icon_bdsm
+	+sprite($s-bdsm)
+.icon_hygiene
+	+sprite($s-hygiene)
+.icon_pathogens
+	+sprite($s-pathogens)
+.icon_oil
+	+sprite($s-oil)
+.icon_book
+	+sprite($s-book)
+.icon_linen_w
+	+sprite($s-linen_w)
+.icon_her_w
+	+sprite($s-her_w)
+.icon_him_w
+	+sprite($s-him_w)
+.icon_bdsm_w
+	+sprite($s-bdsm_w)
+.icon_hygiene_w
+	+sprite($s-hygiene_w)
+.icon_pathogens_w
+	+sprite($s-pathogens_w)
+.icon_oil_w
+	+sprite($s-oil_w)
+.icon_book_w
+	+sprite($s-book_w)
+/* end icon */
+
+// BEGIN HR 
+.hr
+	width: 100%
+	height: 1px
+	&.hr_gray
+		background-color: #494949
+// END HR 
+
+
+// BEGIN LOGO 
+.logo__link
+	display: block
+
+.logo__pic
+	display: block
+	max-width: 131px
+	max-height: 35px
+// END LOGO 
+
+// BEGIN BUTTON 
+.button
+	text-align: right
+
+.button__item
+	display: inline-block
+	vertical-align: middle
+.button__link
+	display: block
+	padding: 5px 4px 4px
+.buuton__cart
+	position: relative
+.cart-count
+	position: absolute
+	top: 0px
+	right: -1px
+	background-color: #e70505
+	border-radius: 20px
+	height: 15px
+	width: 15px
+	text-align: center
+.cart-count__text
+	position: absolute
+	top: 0
+	right: 0
+	left: 0
+	bottom: 0
+	margin: auto
+	line-height: 15px
+	font-size: 11px
+	color: #fff
+	@extend %bold
+// END BUTTON 
+
+// BEGIN HAMBURGER 
+.hamburger
+	display: block
+	+size(22px 18px)
+	position: relative
+.hamburger__line
+	position: absolute
+	left: 0
+	background-color: #fff
+	height: 5px
+	width: 100%
+.hamburger__line_1
+	top: 0
+.hamburger__line_2
+	top: 50%
+	+transform(translateY(-50%))
+.hamburger__line_3
+	bottom: 0
+// END HAMBURGER 
+
+// BEGIN HEADER 
+.header
+	padding: 5px 0 3px
+	background-color: #1c1c1c
+	overflow-x: hidden
+.header__logo
+	float: left
+	width: 55%
+.header__buttons
+	float: left
+	width: 45%
+.header__content
+	+clearfix
+// END HEADER 
+
+
+// BEGIN DISCOUNT 
+.discount
+	text-decoration: none
+	color: #fff
+	@extend %bold
+	font-size: 17px
+	line-height: 1.2
+	text-transform: uppercase
+	text-align: center
+	display: block
+	padding: 55px 0
+.discount__text
+	text-align: right
+	display: inline-block
+	position: relative
+	&:after
+		content: ''
+		position: absolute
+		top: -45px
+		left: 105%
+		background-image: url(img/discount.png)
+		background-repeat: no-repeat
+		background-position: 50% 50%
+		+size(154px 141px)
+// END DISCOUNT 
+
+// BEGIN NAV 
+.nav
+	display: none
+.nav__list
+	border-bottom: 1px solid #888888
+.nav__item
+	border-top: 1px solid #888888
+	.icon-nav__link
+		&:hover
+			background-color: #1c1c1c
+	.icon-nav
+		display: none
+		border-top: 1px solid #888888
+		background-color: #232323
+	.icon-nav__item
+		.icon-nav__text
+			border-top: 1px solid #919191
+			border-bottom: 0
+			color: #fff
+		&:first-child
+			.icon-nav__text
+				border-top: 0
+	&.nav__item_sub
+		.nav__link
+			position: relative
+			&:after
+				content: ''
+				position: absolute
+				top: 50%
+				right: 10px
+				+transform(translateY(-50%))
+				@extend .icon
+				+sprite($s-down)
+		&.active
+			.nav__link
+				&:after
+					top: 48%
+					+sprite($s-up)
+.nav__link
+	font-size: 16px
+	color: #fff
+	text-decoration: none
+	display: block
+	padding: 12px 0 12px 17px
+
+
+.nav-fullversion
+	padding: 30px 0
+	text-align: center
+.nav-fullversion__btn
+	display: inline-block
+	@extend %bold
+	font-size: 15px
+	color: #fff
+	text-transform: uppercase
+	text-decoration: none
+	border-radius: 8px
+	padding: 10px
+	border: 1px solid #707070
+	&:hover
+		background-color: #fff
+		color: #1c1c1c
+// END NAV 
+
+
+// BEGIN BANNER 
+.slider
+	position: relative
+.slider__nav
+	position: absolute
+	top: 50%
+	+transform(translateY(-50%))
+	z-index: 20
+.slider__nav_next
+	right: 10px
+.slider__nav_prev
+	left: 10px
+.slider__item
+	background-repeat: no-repeat
+	background-position: center top
+	background-image: url(img/slider.jpg)
+	background-size: cover
+	min-height: 140px
+	padding-top: 38px
+	.container
+		position: relative
+.slider__title
+	@extend %regular
+	font-size: 18px
+	color: #fff
+	text-transform: uppercase
+	margin-left: 45%
+.slider__desc
+	@extend %regular
+	font-size: 10px
+	color: #e2a161
+	margin-left: 45%
+	text-transform: uppercase
+.slider__link
+	position: absolute
+	display: block
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+.slider__dots
+	position: absolute
+	left: 0
+	bottom: 0
+	z-index: 20
+	margin-bottom: 10px
+	width: 100%
+	line-height: 1
+	text-align: center
+	.owl-dot
+		display: inline-block
+		border-radius: 50%
+		+size(4px)
+		background-color: #1c1c1c
+		margin-left: 3px
+		&:first-child
+			margin-left: 0
+		&.active
+			background-color: #fff
+// END BANNER 
+
+// BEGIN MAIN-NAV 
+.main-nav
+	padding-top: 5px
+// END MAIN-NAV 
+
+// BEGIN ICON-NAV 
+.icon-nav__item
+	font-size: 16px
+	position: relative
+.icon-nav__link
+	text-decoration: none
+	color: #414141
+	line-height: 1.2
+	padding-left: 55px
+	display: block
+	&:hover
+		background-color: #dde0e1
+.icon-nav__icon
+	position: absolute
+	top: 0
+	left: 0
+	bottom: 0
+	width: 55px
+	display: block
+.icon-nav__icon-pic
+	display: block
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	margin: auto
+.icon-nav__text
+	display: block
+	padding: 15px 0
+	border-bottom: 1px solid #d9dbdc
+// END ICON-NAV 
+
+
+// BEGIN MAIN-ACTION 
+.main-action
+	padding-top: 30px
+.main-action__list
+	+clearfix
+.main-action__item
+	float: left
+	width: 49.4%
+	margin-left: 1%
+	margin-bottom: 5px
+	min-height: 230px
+	background-repeat: no-repeat
+	background-position: center center
+	background-size: cover
+	position: relative
+	&.main-action__item_full
+		width: 100%
+		margin-left: 0
+		&+.main-action__item
+			margin-left: 0
+.main-action__link
+	display: block
+	color: #fff
+.main-action__text
+	position: absolute
+	left: 0
+	right: 0
+	width: 100%
+	font-size: 23px
+	line-height: 23px
+	padding: 15px 10px
+	@extend %regular
+	text-transform: uppercase
+	&.main-action__text_red
+		background-color: rgba(#940e15, .8)
+	&.main-action__text_black
+		background-color: rgba(#222222, .8)
+	&.main-action__text_bottom
+		bottom: 0
+	&.main-action__text_top
+		top: 0
+// END MAIN-ACTION 
+
+// BEGIN BRANDS 
+.brands
+	padding-top: 30px
+.brands__slide
+	background-color: #fff
+	border: 1px solid #d5d5d5
+	padding: 20px 15px 20px
+	position: relative
+.brands__title
+	font-size: 16px
+	color: #c60404
+.brands__text
+	font-size: 12px
+	color: #797979
+	line-height: 12px
+
+.brands__preview
+	height: 112px
+	position: relative
+.brands__pic
+	position: absolute
+	top: 0
+	right: 0
+	left: 0
+	bottom: 0
+	display: block
+	margin: auto
+	max-width: 100%
+	max-height: 100%
+.brands__link
+	position: absolute
+	display: block
+	z-index: 3
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+
+.brands__slider-container
+	position: relative
+.brands__nav
+	position: absolute
+	top: 50%
+	line-height: 1
+	+transform(translateY(-50%))
+	z-index: 20
+	cursor: pointer
+	&.brands__nav_next
+		left: 100%
+		+transform(translateX(1px))
+	&.brands__nav_prev
+		right: 100%
+		+transform(translateX(-1px))
+// END BRANDS 
+
+
+// BEGIN VIDEO 
+.main-video
+	margin-top: 30px
+.main-video__slider-container
+	background-color: #fff
+	padding: 7px 7px 10px
+.main-video__item
+	height: 175px
+.main-video__desc
+	margin-top: 3px
+	font-size: 16px
+	color: #c60404
+.main-video__dots
+	width: 100%
+	margin-top: 14px
+	line-height: 1
+	text-align: center
+	.owl-dot
+		display: inline-block
+		border-radius: 50%
+		+size(12px)
+		background-color: #a8a8a8
+		margin-left: 10px
+		&:first-child
+			margin-left: 0
+		&.active
+			background-color: #d1252a
+// END VIDEO 
+
+
+// BEGIN ADVANTEGES 
+.advanteges
+	padding-top: 22px
+.advanteges__item
+	margin: 10px 0 20px
+	line-height: 1.3em
+	position: relative
+	padding-left: 70px
+	min-height: 60px
+.advanteges__icon
+	position: absolute
+	top: 0
+	left: 0
+	+size(70px 60px)
+// END ADVANTEGES 
+
+// BEGIN FULL-SITE 
+.full-site__link
+	color: #7f7f7f
+	display: block
+	text-align: center
+	padding: 20px 0
+.full-site__icon
+	vertical-align: middle
+	margin-right: 10px
+.full-site__text
+	vertical-align: middle
+// END FULL-SITE 
+
+// BEGIN PHONE 
+.phone
+	text-align: center
+.phone__link
+	@extend %bold
+	color: #ff0505
+	font-size: 36px
+	line-height: 36px
+	text-decoration: none
+	letter-spacing: 0.4px
+.phone__text
+	@extend %regular
+	line-height: 17px
+	font-size: 17px
+	color: #8c8c8c
+// END PHONE 
+
+// BEGIN QUESTION-BTN 
+.question-btn
+	display: inline-block
+	background-color: #f2f4f5
+	text-decoration: none
+	text-align: center
+	color: #c60404
+	@extend %regular
+	font-size: 17px
+	width: 255px
+	padding: 10px 0
+// END QUESTION-BTN 
+
+
+// BEGIN FOOTER-CONTACT 
+.footer-contact
+	margin-top: 25px
+	padding-left: 20px
+	font-size: 14px
+.footer-contact__title
+	@extend %bold
+	font-size: 20px
+	text-transform: uppercase
+.footer-contact__copyright
+	margin-top: 13px
+	padding-left: 5px
+.footer-contact__list
+	padding-top: 2px
+	padding-left: 5px
+.footer-contact__term
+	margin-top: 15px
+	font-weight: bold
+.footer-contact__desc
+	line-height: 1.2
+.footer-contact__link
+	text-decoration: none
+	color: #fff
+	&.footer-contact__link_red
+		text-decoration: underline
+		color: #c60404
+		&:hover
+			text-decoration: none
+// END FOOTER-CONTACT 
+
+
+// BEGIN PAYMENTS 
+.payments
+	text-align: center
+.payments__list
+	height: 22px
+.payments__item
+	display: inline-block
+// END PAYMENTS 
+
+// BEGIN SOCIAL 
+.social
+	text-align: center
+.social__title
+	@extend %regular
+	font-size: 17px
+	color: #8c8c8c
+.social__item
+	display: inline-block
+	margin-left: 5px
+	&:first-child
+		margin-left: 0
+.social__link
+	display: block
+// END SOCIAL 
+
+
+// BEGIN DEVELOP 
+.develop
+	padding-top: 5px
+	text-align: center
+	font-size: 12px
+	color: #7d7d7d
+.develop__text
+	display: inline-block
+	vertical-align: middle
+	margin-right: 5px
+.develop__link
+	display: inline-block
+	vertical-align: middle
+.develop__icon
+	vertical-align: middle
+// END DEVELOP 
+
+// BEGIN FOOTER 
+.footer
+	background-color: #1c1c1c
+	color: #fff
+	padding-top: 22px
+	padding-bottom: 10px
+.footer__question-btn
+	margin-top: 15px
+	text-align: center
+.footer__payments
+	margin-top: 22px
+.footer__links
+	margin-top: 14px
+	text-align: center
+.footer__link
+	display: inline-block
+	font-size: 12px
+	color: #7f7f7f
+	text-decoration: underline
+	margin-left: 10px
+	&:hover
+		text-decoration: none
+	&:first-child
+		margin-left: 0
+.footer__social
+	margin: 30px 0
+.copyright_bottom
+	margin-top: 13px
+	text-align: center
+	font-size: 12px
+	color: #7d7d7d
+
+
+// END FOOTER 
+
+//ALWAYS END
+@import "_media.sass"

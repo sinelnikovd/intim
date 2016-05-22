@@ -1,0 +1,394 @@
+extends ./template/template.jade
+
+block title
+	title Главная страница
+
+block content
+	// BEGIN HEADER 
+	.header
+		.container
+			.header__content
+				// BEGIN HEADER__LOGO 
+				.header__logo
+					.logo
+						a(href="#").logo__link
+							img(src="img/logo.png", alt="").logo__pic
+				// END HEADER__LOGO 
+				// BEGIN HEADER__BUTTON 
+				.header__buttons
+					.button
+						.button__item
+							a(href="#").button__link
+								i.icon.icon_search
+						.button__item
+							a(href="#").button__link
+								i.icon.icon_like
+						.button__item
+							a(href="#").button__link.buuton__cart
+								.cart-count
+									span.cart-count__text 4
+								i.icon.icon_cart
+						.button__item
+							a(href="javascript:;").button__link.button__link_hamburger
+								.hamburger
+									span.hamburger__line.hamburger__line_1
+									span.hamburger__line.hamburger__line_2
+									span.hamburger__line.hamburger__line_3
+				// END HEADER__BUTTON 
+		.container-nobd
+			// BEGIN NAV 
+			.nav
+				ul.nav__list
+					li.nav__item.nav__item_sub
+						a(href="#").nav__link Каталог
+						ul.icon-nav
+							li.icon-nav__item
+								a(href="#").icon-nav__link
+									span.icon-nav__icon
+										i.icon.icon_linen_w.icon-nav__icon-pic
+									span.icon-nav__text Белье и одежда
+							li.icon-nav__item
+								a(href="#").icon-nav__link
+									span.icon-nav__icon
+										i.icon.icon_her_w.icon-nav__icon-pic
+									span.icon-nav__text Игрушки для нее
+							li.icon-nav__item
+								a(href="#").icon-nav__link
+									span.icon-nav__icon
+										i.icon.icon_him_w.icon-nav__icon-pic
+									span.icon-nav__text Игрушки для него
+							li.icon-nav__item
+								a(href="#").icon-nav__link
+									span.icon-nav__icon
+										i.icon.icon_bdsm_w.icon-nav__icon-pic
+									span.icon-nav__text BDSM &amp; FETISH
+							li.icon-nav__item
+								a(href="#").icon-nav__link
+									span.icon-nav__icon
+										i.icon.icon_hygiene_w.icon-nav__icon-pic
+									span.icon-nav__text Лубриканты и гигиена 
+							li.icon-nav__item
+								a(href="#").icon-nav__link
+									span.icon-nav__icon
+										i.icon.icon_pathogens_w.icon-nav__icon-pic
+									span.icon-nav__text Возбудители желания
+							li.icon-nav__item
+								a(href="#").icon-nav__link
+									span.icon-nav__icon
+										i.icon.icon_oil_w.icon-nav__icon-pic
+									span.icon-nav__text Массажные масла <br>и парфюмерия
+							li.icon-nav__item
+								a(href="#").icon-nav__link
+									span.icon-nav__icon
+										i.icon.icon_book_w.icon-nav__icon-pic
+									span.icon-nav__text Журналы и сувениры
+					li.nav__item.nav__item_sub
+						a(href="#").nav__link Новинки
+						ul.sub-menu-nav
+							li.sub-menu__item
+					li.nav__item
+						a(href="#").nav__link Распродажи
+					li.nav__item
+						a(href="#").nav__link Новости
+					li.nav__item
+						a(href="#").nav__link Консультация сексолога
+					li.nav__item
+						a(href="#").nav__link Личный кабинет
+					li.nav__item
+						a(href="#").nav__link Форум
+					li.nav__item
+						a(href="#").nav__link Доставка
+					li.nav__item
+						a(href="#").nav__link Оплата
+					li.nav__item
+						a(href="#").nav__link О нас
+				a(href="#").discount
+					.discount__text
+						span.t-red Получить<br>
+						|  карту<br>
+						| привилегий
+				.nav-fullversion
+					a(href="#").nav-fullversion__btn Полная версия
+			// END NAV 
+	// END HEADER 
+
+	// BEGIN SLIDER 
+	.slider
+		.container
+			.slider__nav.slider__nav_next
+					i.icon.icon_next
+			.slider__nav.slider__nav_prev
+					i.icon.icon_prev
+			.slider__items
+				.slider__item
+					a(href="#").slider__link
+					.slider__title Коллекция белья
+					.slider__desc весна/лето
+				.slider__item
+					a(href="#").slider__link
+					.slider__title Коллекция белья
+					.slider__desc весна/лето
+				.slider__item
+					a(href="#").slider__link
+					.slider__title Коллекция белья
+					.slider__desc весна/лето
+				.slider__item
+					a(href="#").slider__link
+					.slider__title Коллекция белья
+					.slider__desc весна/лето
+				.slider__item
+					a(href="#").slider__link
+					.slider__title Коллекция белья
+					.slider__desc весна/лето
+			.slider__dots
+
+	// END SLIDER 
+
+	// BEGIN MAIN-NAV 
+	.main-nav
+		.container
+			ul.icon-nav
+				li.icon-nav__item
+					a(href="#").icon-nav__link
+						span.icon-nav__icon
+							i.icon.icon_new.icon-nav__icon-pic
+						span.icon-nav__text Новинки
+				li.icon-nav__item
+					a(href="#").icon-nav__link
+						span.icon-nav__icon
+							i.icon.icon_linen.icon-nav__icon-pic
+						span.icon-nav__text Белье и одежда
+				li.icon-nav__item
+					a(href="#").icon-nav__link
+						span.icon-nav__icon
+							i.icon.icon_her.icon-nav__icon-pic
+						span.icon-nav__text Игрушки для нее
+				li.icon-nav__item
+					a(href="#").icon-nav__link
+						span.icon-nav__icon
+							i.icon.icon_him.icon-nav__icon-pic
+						span.icon-nav__text Игрушки для него
+				li.icon-nav__item
+					a(href="#").icon-nav__link
+						span.icon-nav__icon
+							i.icon.icon_bdsm.icon-nav__icon-pic
+						span.icon-nav__text BDSM &amp; FETISH
+				li.icon-nav__item
+					a(href="#").icon-nav__link
+						span.icon-nav__icon
+							i.icon.icon_hygiene.icon-nav__icon-pic
+						span.icon-nav__text Лубриканты и гигиена 
+				li.icon-nav__item
+					a(href="#").icon-nav__link
+						span.icon-nav__icon
+							i.icon.icon_pathogens.icon-nav__icon-pic
+						span.icon-nav__text Возбудители желания
+				li.icon-nav__item
+					a(href="#").icon-nav__link
+						span.icon-nav__icon
+							i.icon.icon_oil.icon-nav__icon-pic
+						span.icon-nav__text Массажные масла и парфюмерия
+				li.icon-nav__item
+					a(href="#").icon-nav__link
+						span.icon-nav__icon
+							i.icon.icon_book.icon-nav__icon-pic
+						span.icon-nav__text Журналы и сувениры
+
+	// END MAIN-NAV 
+
+	// BEGIN MAIN-ACTION 
+	.main-action
+		.container
+			h2.title Акции и скидки
+			ul.main-action__list
+				li(style="background-image: url(img/action1.jpg); min-height:170px").main-action__item.main-action__item_full
+					a(href="#").main-action__link
+				li(style="background-image: url(img/action2.jpg)").main-action__item
+					a(href="#").main-action__link
+						.main-action__text.main-action__text_bottom.main-action__text_red Новая Коллекция белья
+				li(style="background-image: url(img/action3.jpg)").main-action__item
+					a(href="#").main-action__link
+						.main-action__text.main-action__text_top.main-action__text_black Расродажа раздела BDSM
+	// END MAIN-ACTION 
+
+	// BEGIN BRANDS 
+	.brands
+		.container
+			h2.title Мировые бренды
+			.brands__slider-container
+				.brands__nav.brands__nav_next
+					i.icon.icon_next_mini
+				.brands__nav.brands__nav_prev
+					i.icon.icon_prev_mini
+				.brands__slider
+					.brands__slide
+						a(href="#").brands__link
+						.brands__preview
+							img(src="img/brand/durex.jpg", alt="").brands__pic
+						.brands__desc
+							.brands__title DUREX
+							.brands__text презервативы и лубриканты
+					.brands__slide
+						a(href="#").brands__link
+						.brands__preview
+							img(src="img/brand/fun.jpg", alt="").brands__pic
+						.brands__desc
+							.brands__title Fun
+							.brands__text презервативы и лубриканты
+					.brands__slide
+						a(href="#").brands__link
+						.brands__preview
+							img(src="img/brand/durex.jpg", alt="").brands__pic
+						.brands__desc
+							.brands__title DUREX
+							.brands__text презервативы и лубриканты
+	// END BRANDS 
+
+	// BEGIN VIDEO 
+	.main-video
+		.container
+			h2.title Видео
+			.main-video__slider-container
+				.main-video__slider
+					.main-video__item
+						//.main-video__main-video
+						a(href="https://www.youtube.com/watch?v=MUrMYRQNb_k").owl-video
+					.main-video__item
+						//.main-video__main-video
+						a(href="https://www.youtube.com/watch?v=MUrMYRQNb_k").owl-video
+					.main-video__item
+						//.main-video__main-video
+						a(href="https://www.youtube.com/watch?v=MUrMYRQNb_k").owl-video
+					.main-video__item
+						//.main-video__main-video
+						a(href="https://www.youtube.com/watch?v=MUrMYRQNb_k").owl-video
+					.main-video__item
+						//.main-video__main-video
+						a(href="https://www.youtube.com/watch?v=MUrMYRQNb_k").owl-video
+				.main-video__descs
+					.main-video__desc Приветственное слово1
+					.main-video__desc Приветственное слово2
+					.main-video__desc Приветственное слово3
+					.main-video__desc Приветственное слово4
+					.main-video__desc Приветственное слово5
+			.main-video__dots
+	// END VIDEO 
+
+	// BEGIN ADVANTEGES 
+	.advanteges
+		.container
+			h2.title Наши преимущества
+			ul.advanteges__list
+				li.advanteges__item
+					span.advanteges__icon
+						i.icon.icon_money
+					span.advanteges__text Доступные цены. Мы не являемся перекупщиками. Мы работаем на правах представительства. Именно по этой причине многие цены на наши товары на порядок ниже, чем у других конкурентов.
+				li.advanteges__item
+					span.advanteges__icon
+						i.icon.icon_quality
+					span.advanteges__text Качественная продукция – залог нашей популярности. Наш секс шоп на официальном уровне представляет более сотни известных брендов в мире интимных товаров. Только качественная продукция, подтвержденная сертификатами и гарантиями обеспечивает вам полную уверенность в долговечности, эффективности и в безопасности предлагаемых товаров.
+				li.advanteges__item
+					span.advanteges__icon
+						i.icon.icon_service
+					span.advanteges__text Высокий уровень сервиса – наш главный приоритет. Мы стараемся общаться с клиентами так, как удобно им.
+				li.advanteges__item
+					span.advanteges__icon
+						i.icon.icon_time
+					span.advanteges__text Оперативность обработки заказа. Мы быстро рассматриваем пришедшую заявку и насколько это возможно, быстро отправляем товар через самые быстрые и проверенные службы доставки
+				li.advanteges__item
+					span.advanteges__icon
+						i.icon.icon_anonim
+					span.advanteges__text Мы предлагаем выбрать товар прямо из дома или с рабочего места в нашем виртуальном магазине. Даже курьер не будет знать, что находится внутри. Специальная защитная коробка и упаковка не имеет каких-либо опознавательных подписей
+	// END ADVANTEGES 
+
+	// BEGIN FULL-SITE 
+	.full-site
+		.container
+			a(href="#").full-site__link
+				i.icon.icon_full-site.full-site__icon
+				span.full-site__text Перейти на основную версию сайта
+	// END FULL-SITE 
+
+	// BEGIN FOOTER 
+	.footer
+		.container
+			.footer__phone
+				.phone
+					a(href="tel:88003330734").phone__link 8-800-333-07-34
+					.phone__text бесплатный многоканальный номер
+			.footer__question-btn
+				a(href="#").question-btn Задать вопрос
+
+			// BEGIN FOOTER-CONTACT 
+			.footer-contact
+				.footer-contact__title Наши контакты
+				.copyright.footer-contact__copyright 2016 &copy; ООО &laquo;БАД для мужчин&raquo;
+				dl.footer-contact__list
+					dt.footer-contact__term Адрес:
+					dd.footer-contact__desc 695582 Приморский край, г. Находка, ул. Портовая, д.16, оф. 23
+					dt.footer-contact__term E-mail:
+					dd.footer-contact__desc
+						a(href="mailto:sale@shop-vl.ru").footer-contact__link.footer-contact__link_red sale@shop-vl.ru
+					dt.footer-contact__term Тел.:
+					dd.footer-contact__desc
+						a(href="mailto:sale@shop-vl.ru").footer-contact__link 8-800-333-07-34
+					dt.footer-contact__term Skype:
+					dd.footer-contact__desc
+						a(href="skype:sale-shop").footer-contact__link sale-shop
+			// END FOOTER-CONTACT 
+			
+			.footer__payments
+				.payments
+					.payments__title Мы принимаем:
+					ul.payments__list
+						li.payments__item
+							i.icon.icon_visa
+						li.payments__item
+							i.icon.icon_mascard
+						li.payments__item
+							i.icon.icon_yad
+						li.payments__item
+							i.icon.icon_paypal
+						li.payments__item
+							i.icon.icon_wmr
+						li.payments__item
+							i.icon.icon_qiwi
+						li.payments__item
+							i.icon.icon_doc
+						li.payments__item
+							i.icon.icon_robokassa
+
+
+			.footer__links
+				a(href="#").footer__link Договор оферты
+				a(href="#").footer__link Политика конфиденциальности
+
+			.footer__social
+				.social
+					.social__title Мы в соцсетях
+					ul.social__list
+						li.social__item
+							a(href="#").social__link
+								i.icon.icon_vk
+						li.social__item
+							a(href="#").social__link
+								i.icon.icon_inst
+						li.social__item
+							a(href="#").social__link
+								i.icon.icon_tw
+						li.social__item
+							a(href="#").social__link
+								i.icon.icon_od
+						li.social__item
+							a(href="#").social__link
+								i.icon.icon_yt
+
+			.hr.hr_gray
+
+			.copyright.copyright_bottom 2016 &copy; ООО &laquo;БАД для мужчин&raquo;
+
+			.develop
+				span.develop__text Сделано в
+				a(href="#").develop__link
+					i.icon.icon_develop.develop__icon
+	// END FOOTER 

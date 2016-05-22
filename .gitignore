@@ -1,0 +1,4 @@
+/desing/
+/node_modules/
+*.sublime-gulp.cache
+.directory
