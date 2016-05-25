@@ -1,0 +1,50 @@
+extends ./template/template.jade
+
+block title
+	title Игрушки для нее
+
+block content
+	include ./template/header.jade
+	.container
+		- var backtext = "Игрушки для нее";
+		include ./template/back.jade
+
+		// BEGIN SUB-NAV 
+		ul.sub-nav.catalog1_sub-nav
+			li.sub-nav__item
+				a(href="#").sub-nav__link Анальные
+			li.sub-nav__item
+				a(href="#").sub-nav__link Вибраторы
+			li.sub-nav__item
+				a(href="#").sub-nav__link Вагинальные шарики
+			li.sub-nav__item
+				a(href="#").sub-nav__link Виброяйца
+			li.sub-nav__item
+				a(href="#").sub-nav__link Вибростимуляторы
+			li.sub-nav__item
+				a(href="#").sub-nav__link Вибронаборы
+			li.sub-nav__item
+				a(href="#").sub-nav__link Игрушки из стекла
+			li.sub-nav__item
+				a(href="#").sub-nav__link Фалоиметаторы
+			li.sub-nav__item
+				a(href="#").sub-nav__link Бабочки
+			li.sub-nav__item
+				a(href="#").sub-nav__link Страпоны
+			li.sub-nav__item
+				a(href="#").sub-nav__link Куклы для женщин
+			li.sub-nav__item
+				a(href="#").sub-nav__link Помпы для женщин
+			li.sub-nav__item
+				a(href="#").sub-nav__link Секс машины
+			li.sub-nav__item
+				a(href="#").sub-nav__link Секс машины/аксессуары
+			li.sub-nav__item
+				a(href="#").sub-nav__link Качели
+			li.sub-nav__item
+				a(href="#").sub-nav__link Тренажёры
+		// END SUB-NAV 
+
+
+	include ./template/full-site.jade
+	include ./template/footer.jade

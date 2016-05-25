@@ -46,7 +46,7 @@ body
 	font-family: Arial, $helvetica
 	font-weight: normal
 	overflow-x: hidden
-	color: #000
+	color: #3e3e3e
 	background-color: #f2f4f5
 	position: relative
 
@@ -75,6 +75,16 @@ body
 	font-size: 30px
 	color: #9b0303
 	text-transform: uppercase
+
+.link-container
+	text-align: center
+
+a,
+.link
+	color: #c60404
+	text-decoration: underline
+	&:hover
+		text-decoration: none
 // END TEXT 
 
 /* icon */
@@ -178,6 +188,14 @@ body
 	+sprite($s-oil_w)
 .icon_book_w
 	+sprite($s-book_w)
+
+.icon_fb
+	+sprite($s-fb)
+.icon_gl
+	+sprite($s-gl)
+
+.icon_succes
+	+sprite($s-succes)
 /* end icon */
 
 // BEGIN HR 
@@ -359,6 +377,22 @@ body
 		color: #1c1c1c
 // END NAV 
 
+
+// BEGIN SUB-NAV 
+.sub-nav
+	border-top: 1px solid #d9dbdc
+.sub-nav__item
+	border-bottom: 1px solid #d9dbdc
+.sub-nav__link
+	display: block
+	padding: 16px 0 15px 5px
+	font-size: 16px
+	line-height: 18px
+	color: #414141
+	text-decoration: none
+	&:hover
+		background-color: #d9dbdc
+// END SUB-NAV 
 
 // BEGIN BANNER 
 .slider
@@ -754,9 +788,276 @@ body
 	text-align: center
 	font-size: 12px
 	color: #7d7d7d
-
-
 // END FOOTER 
+
+
+// BEGIN BACK 
+.back__link
+	display: block
+	padding: 20px 0 6px 20px
+	color: #9b0303
+	@extend %regular
+	font-size: 20px
+	line-height: 1.2
+	text-transform: uppercase
+	text-decoration: none
+	&:before
+		content: ''
+		position: absolute
+		top: 25px
+		left: 10px
+		+size(8px)
+		border-top: 2px solid #9b0303
+		border-left: 2px solid #9b0303
+		+transform(rotate(-45deg))
+		margin-right: 5px
+// END BACK 
+
+// BEGIN AUTH-SOCIAL 
+.auth-social__text
+	color: #1c1c1c
+.auth-social__in-social
+	margin-top: 5px
+	text-align: center
+	color: #a1a1a1
+	font-size: 12px
+.auth-social__list
+	text-align: center
+.auth-social__item
+	display: inline-block
+	margin-left: 3px
+	&:first-child
+		margin-left: 0
+.auth-social__link
+	display: block
+// END AUTH-SOCIAL 
+
+
+// BEGIN AUTH 
+.auth_link
+	text-align: right
+	display: inline-block
+	width: 25%
+.auth_link-container
+	margin-top: 10px
+// END AUTH 
+
+// BEGIN FORM 
+.form_auth
+	margin-top: 17px
+.form__line
+	margin-bottom: 17px
+
+.label
+	font-size: 14px
+	color: #1c1c1c
+	display: block
+.input
+	display: block
+	width: 100%
+	border: 1px solid #dbd9d7
+	background-color: #fff
+	height: 44px
+	line-height: 42px
+	font-size: 16px
+	color: #333333
+	padding: 0 15px
+	&.input_auth
+		display: inline-block
+		width: 70%
+
+.textarea
+	display: block
+	width: 100%
+	border: 1px solid #dbd9d7
+	background-color: #fff
+	font-size: 16px
+	color: #333333
+	padding: 15px
+	resize: none
+
+.btn-container
+	text-align: center
+
+.btn
+	border: none
+	border-radius: 0
+	font-size: 18px
+	height: 52px
+	line-height: 50px
+	padding: 0 30px
+	cursor: pointer
+	display: inline-block
+	&.btn_red
+		color: #fff
+		background-color: #ca1515
+	&.btn_psdding-big
+		padding: 0 60px
+	&.btn_100
+		padding: 0
+		width: 100%
+
+.checkbox-container
+	margin-top: 5px
+.checkbox__label
+	font-size: 14px
+	color: #838383
+	display: inline-block
+	margin-left: 2px
+
+.captcha
+	position: relative
+.captcha_img
+	position: absolute
+	top: 0
+	left: 0
+	width: 160px
+	height: 44px
+.captcha_pic
+	position: absolute
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	margin:  auto
+	max-width: 100%
+	max-height: 100%
+.captcha__input
+	margin-left: 160px
+// END FORM 
+
+// BEGIN EVALUATION 
+.evaluation
+	text-align: center
+	padding-top: 10px
+.evaluation__text
+	font-size: 14px
+	line-height: 1.3
+	color: #adadad
+
+.evaluation__stars
+	font-family: 'Flaticon' 
+	margin: 5px auto
+	&> fieldset
+		border: none
+		display: inline-block
+		position: relative
+		&:not(:checked)
+			&> input
+				display: none
+			&> label
+				float: right
+				width: 1.08em
+				padding: 0 .05em
+				overflow: hidden
+				white-space: nowrap
+				cursor: pointer
+				font-size: 42px
+				color: #cfcfcf
+				&:before
+					content: "\f101  "
+				&:hover,
+				&:hover ~ label
+					color: #ffb502
+					text-shadow: 0 0 3px #ff9102
+		&> input:checked
+			& ~ label
+				color: #ffb502
+
+		&> label:active
+			position: relative
+			top: 2px
+
+
+// END EVALUATION 
+
+
+// BEGIN .AUTH-SUCCES 
+.auth-succes
+	text-align: center
+	padding: 44px 0 30px
+.auth-succes__text
+	padding: 0 20px
+	margin-top: 10px
+	font-size: 20px
+	line-height: 1.2
+	@extend %regular
+	text-transform: uppercase
+	color: #9b0303
+.auth-succes__btn
+	margin-top: 50px
+// END .AUTH-SUCCES 
+
+
+// BEGIN ORDER_SUCCES 
+.order_succes
+	text-align: center
+	padding: 44px 0 0
+.order-succes__text
+	color: #2c2c2c
+	font-size: 20px
+	line-height: 1.2
+	margin-top: 10px
+.order-succes__status
+	margin-top: 25px
+	color: #6e6e6e
+	font-size: 14px
+	padding: 0 20px
+.order-succes__btn
+	margin-top: 40px
+// END ORDER_SUCCES 
+
+
+// BEGIN CATALOG1 
+.catalog1_sub-nav
+	margin-top: 10px
+// END CATALOG1 
+
+// BEGIN CONTENT 
+.content
+	h2
+		margin-top: 10px
+		@extend %regular
+		font-size: 18px
+		color: #1c1c1c
+	p
+		margin: 10px 0 20px
+		line-height: 1.2
+// END CONTENT 
+
+
+// BEGIN INFO 
+.info
+	color: #3e3e3e
+	img
+		margin-bottom: 10px
+	h2
+		margin-top: 15px
+		font-size: 18px
+		font-weight: bold
+	p
+		margin: 15px 0 10px
+		font-size: 14px
+		line-height: 1.2
+.info__controls
+	margin-top: 20px
+.info__btn
+	display: inline-block
+	width: 49%
+	background-color: #fff
+	border: 1px solid #e7e3e3
+	margin-left: 1%
+	text-align: center
+	font-size: 14px
+	color: #1c1c1c
+	text-decoration: none
+	height: 39px
+	line-height: 37px
+	&:first-child
+		margin-left: 0
+	&:hover
+		background-color: #e7e3e3
+// END INFO 
 
 //ALWAYS END
 @import "_media.sass"

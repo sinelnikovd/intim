@@ -1,0 +1,28 @@
+extends ./template/template.jade
+
+block title
+	title Заказать-обратный-звонок
+
+block content
+	include ./template/header.jade
+	.container
+		- var backtext = "Заказать-обратный-звонок";
+		include ./template/back.jade
+		// BEGIN FORM 
+		form(action="/").form
+			.form__line
+				label(for="tel").label Ваш номер телефона
+				input(type="tel")#tel.input.data-inputmask
+			.form__line
+				label(for="name").label Как к вам обращаться
+				input(type="text")#name.input
+			.form__line
+				label(for="time").label Удобное время звонка по Москве
+				input(type="time")#time.input
+			.form__line
+				.btn-container
+					button(type="submit").btn.btn_red Заказать
+		// END FORM 
+
+	include ./template/full-site.jade
+	include ./template/footer.jade

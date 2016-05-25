@@ -1,0 +1,48 @@
+extends ./template/template.jade
+
+block title
+	title Регистрация
+
+block content
+	include ./template/header.jade
+
+	.container
+		- var backtext = "Регистрация";
+		include ./template/back.jade
+
+		// BEGIN FORM 
+		form(action="/").form
+			.form__line
+				label(for="email").label E-mail
+				input(type="text")#email.input
+				.checkbox-container
+					input(type="checkbox" checked="checked")#news.checkbox
+					label(for="news").checkbox__label Подписаться на новости
+			.form__line
+				label(for="pass").label Придумайте пароль
+				input(type="password")#pass.input
+			.form__line
+				label(for="repass").label Повторите пароль
+				input(type="password")#repass.input
+			.form__line
+				label(for="login").label Придумайте логин
+				input(type="text")#login.input
+			.form__line
+				.captcha
+					.captcha_img
+						img(src="img/captcha.png", alt="").captcha_pic
+					.captcha__input
+						input(type="text").input
+			.form__line
+				.btn-container
+					button(type="submit").btn.btn_red Регистрация
+				.link-container.auth_link-container
+					a(href="#").link Вход
+		// END FORM 
+
+
+
+
+	include ./template/full-site.jade
+	include ./template/footer.jade
+

@@ -1,0 +1,46 @@
+extends ./template/template.jade
+
+block title
+	title Авторизация
+
+block content
+	include ./template/header.jade
+
+	.container
+		- var backtext = "Авторизация";
+		include ./template/back.jade
+		// BEGIN AUTH-SOCIAL 
+		.auth-social
+			.auth-social__text Мы не будем делать публикации от вашего имени
+			.auth-social__in-social Войти с помощью
+			ul.auth-social__list
+				li.auth-social__item
+					a(href="#").auth-social__link
+						i.icon.icon_vk
+				li.auth-social__item
+					a(href="#").auth-social__link
+						i.icon.icon_fb
+				li.auth-social__item
+					a(href="#").auth-social__link
+						i.icon.icon_gl
+		// END AUTH-SOCIAL 
+
+		// BEGIN FORM 
+		form(action="/").form.form_auth
+			.form__line
+				label(for="login").label Введите логин или e-mail
+				input(type="text")#login.input
+			.form__line
+				label(for="pass").label Введите пароль
+				input(type="password")#pass.input.input_auth
+				.auth_link
+					a(href="#").link Напомнить?
+			.form__line
+				.btn-container
+					button(type="submit").btn.btn_red Войти
+				.link-container.auth_link-container
+					a(href="#").link Зарегистрироваться
+		// END FORM 
+
+	include ./template/full-site.jade
+	include ./template/footer.jade

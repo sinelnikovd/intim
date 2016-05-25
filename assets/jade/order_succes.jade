@@ -1,0 +1,22 @@
+extends ./template/template.jade
+
+block title
+	title Ваш заказ принят
+
+block content
+	include ./template/header.jade
+	.container
+		// BEGIN ORDER_SUCCES 
+		.order_succes
+			.order-succes__icon
+				i.icon.icon_succes
+			.order-succes__text Александр,<br>Ваш заказ принят и ему присвоен номер <br><span class="t-red">14786547</span>
+			.order-succes__status Cтатус заказа вы сможете посмотреть в 
+				a(href="#").link личном кабинете
+			.order-succes__btn
+				.btn-container
+					button(type="submit").btn.btn_red Вернуться в каталог
+		// END ORDER_SUCCES 
+
+	include ./template/full-site.jade
+	include ./template/footer.jade

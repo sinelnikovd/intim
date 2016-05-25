@@ -1,0 +1,19 @@
+extends ./template/template.jade
+
+block title
+	title Авторизация прошла успешно
+
+block content
+	include ./template/header.jade
+	.container
+		// BEGIN AUTH-SUCCES 
+		.auth-succes
+			.auth-succes__icon
+				i.icon.icon_succes
+			.auth-succes__text Авторизация прошла успешно
+			.auth-succes__btn
+				.btn-container
+					button(type="submit").btn.btn_red К покупкам!
+		// END AUTH-SUCCES 
+	include ./template/full-site.jade
+	include ./template/footer.jade
