@@ -1,0 +1,40 @@
+extends ./template/template.jade
+
+block title
+	title Акции
+
+block content
+	include ./template/header.jade
+	.container
+		- var backtext = "Акции";
+		include ./template/back.jade
+
+	// BEGIN ACTIONS 
+	.actions
+		a(href="#").actions__link
+		.actions__preview(style="background-image: url('img/actions.jpg')")
+		.actions__timer
+			.container
+				.timer(data-endtime="2016/06/25 12:00")
+	// END ACTIONS 
+
+	// BEGIN ACTIONS 
+	.actions
+		a(href="#").actions__link
+		.actions__preview(style="background-image: url('img/actions.jpg')")
+		.actions__timer
+			.container
+				.timer(data-endtime="2016/08/25 12:00")
+	// END ACTIONS 
+
+	// BEGIN ACTIONS 
+	.actions
+		a(href="#").actions__link
+		.actions__preview(style="background-image: url('img/actions.jpg')")
+		.actions__timer
+			.container
+				.timer(data-endtime="2016/12/25 12:00")
+	// END ACTIONS 
+
+	include ./template/full-site.jade
+	include ./template/footer.jade

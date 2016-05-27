@@ -1,0 +1,24 @@
+extends ./template/template.jade
+
+block title
+	title Название акции
+
+block content
+	include ./template/header.jade
+	.container
+		- var backtext = "Название акции";
+		include ./template/back.jade
+	// BEGIN ACTIONS 
+	.actions
+		a(href="#").actions__link
+		.actions__preview(style="background-image: url('img/actions.jpg')")
+		.actions__timer
+			.container
+				.timer(data-endtime="2016/06/25 12:00")
+	// END ACTIONS 
+	.container
+		include ./template/filter.jade
+		include ./template/product-cards.jade
+
+	include ./template/full-site.jade
+	include ./template/footer.jade

@@ -6,6 +6,8 @@
 
 @import "libs/sprite.sass"
 @import "libs/owl.carousel.sass"
+@import "libs/magnific-popup.sass"
+@import "libs/nice-select.scss"
 
 *
 	box-sizing: border-box
@@ -69,6 +71,9 @@ body
 
 .t-red
 	color: #ff0606
+
+.t-red2
+	color: #9b0303
 
 .title
 	@extend %regular
@@ -196,6 +201,20 @@ a,
 
 .icon_succes
 	+sprite($s-succes)
+.icon_p_prev
+	+sprite($s-p_prev)
+.icon_p_next
+	+sprite($s-p_next)
+
+.icon_add_cart
+	+sprite($s-add_cart)
+.icon_favorite
+	+sprite($s-favorite)
+
+.icon_remove
+	+sprite($s-remove)
+	&:hover
+		+sprite($s-remove_h)
 /* end icon */
 
 // BEGIN HR 
@@ -204,6 +223,8 @@ a,
 	height: 1px
 	&.hr_gray
 		background-color: #494949
+	&.hr_gray2
+		background-color: #d8d9d8
 // END HR 
 
 
@@ -320,6 +341,21 @@ a,
 	border-bottom: 1px solid #888888
 .nav__item
 	border-top: 1px solid #888888
+	.sub-nav
+		display: none
+		border-top: 1px solid #888888
+		background-color: #232323
+	.sub-nav__link
+		color: #fff
+		padding-left: 25px
+		&:hover
+				background-color: #1c1c1c
+	.sub-nav__item
+		border-top: 1px solid #919191
+		border-bottom: 0
+		color: #fff
+		&:first-child
+			border-top: 0
 	.icon-nav__link
 		&:hover
 			background-color: #1c1c1c
@@ -327,6 +363,7 @@ a,
 		display: none
 		border-top: 1px solid #888888
 		background-color: #232323
+
 	.icon-nav__item
 		.icon-nav__text
 			border-top: 1px solid #919191
@@ -444,6 +481,7 @@ a,
 	line-height: 1
 	text-align: center
 	.owl-dot
+		cursor: pointer
 		display: inline-block
 		border-radius: 50%
 		+size(4px)
@@ -811,6 +849,10 @@ a,
 		border-left: 2px solid #9b0303
 		+transform(rotate(-45deg))
 		margin-right: 5px
+	&.back__link_no_arrow
+		padding-left: 0
+		&:before
+			display: none
 // END BACK 
 
 // BEGIN AUTH-SOCIAL 
@@ -888,14 +930,19 @@ a,
 	padding: 0 30px
 	cursor: pointer
 	display: inline-block
+	text-decoration: none
 	&.btn_red
 		color: #fff
 		background-color: #ca1515
+	&.btn_gray
+		color: #fff
+		background-color: #969696
 	&.btn_psdding-big
 		padding: 0 60px
 	&.btn_100
 		padding: 0
 		width: 100%
+		text-align: center
 
 .checkbox-container
 	margin-top: 5px
@@ -1058,6 +1105,492 @@ a,
 	&:hover
 		background-color: #e7e3e3
 // END INFO 
+
+// BEGIN PAGINATION 
+.pagination
+	text-align: center
+	margin-top: 15px
+	margin-bottom: 10px
+
+.pagination__control
+	display: inline-block
+	vertical-align: middle
+	line-height: 1
+	padding: 0 7px
+.pagination__list
+	display: inline-block
+	vertical-align: middle
+
+.pagination__item
+	display: inline-block
+	vertical-align: middle
+	font-size: 16px
+	font-weight: bold
+	color: #1c1c1c
+.pagination__link
+	font-size: 16px
+	line-height: 16px
+	color: #1c1c1c
+	text-decoration: none
+	padding: 6px
+	&.active
+		background-color: #fff
+		border: 1px solid #d5d5d5
+		color: #b24442
+	&:hover
+		background-color: #9b0303
+		color: #fff
+// END PAGINATION 
+
+// BEGIN INFO-LIST 
+.info-list__item
+	margin: 15px 0
+	+clearfix
+.info-list__preview
+	float: left
+	width: 30%
+.info-list__desc
+	float: left
+	width: 70%
+	padding-top: 15px
+.info-list__link
+	font-size: 13px
+	text-transform: uppercase
+.info-list__date
+	font-size: 13px
+	color: #9e9e9e
+	margin-top: 5px
+.info-list__pic
+	border-radius: 50%
+// END INFO-LIST 
+
+
+// BEGIN RACALL 
+.recall
+	padding-top: 5px
+.recall__item
+	background-color: #fff
+	margin: 10px 0
+	padding: 12px 15px 20px
+	font-size: 14px
+.recall__name
+	color: #ea0505
+	font-weight: bold
+	margin-bottom: 7px
+.recall__stars
+	margin-top: 3px
+.recall__star
+	font-family: 'Flaticon' 
+	font-size: 16px
+	color: #cfcfcf
+	&:before
+		content: "\f101"
+	&.active
+		color: #ffb502
+
+.recall__term
+	font-weight: bold
+	line-height: 1
+	margin-top: 10px
+.recall__desc
+	margin-top: 2px
+	line-height: 1.2
+// END RACALL 
+
+
+// BEGIN FILTER 
+.filter
+	margin-top: 5px
+	padding-bottom: 10px 
+	&.active
+		.filter__top-line
+			&:after
+				top: 20px
+				+transform(rotate(135deg))
+.filter__top-line
+	font-size: 20px
+	@extend %regular
+	padding: 4px 0
+	border-bottom: 1px solid #e5e5e5
+	color: #696969
+	cursor: pointer
+	position: relative
+	&:after
+		content: ''
+		position: absolute
+		top: 15px
+		right: 3px
+		border-left: 2px solid #acacac
+		border-bottom: 2px solid #acacac
+		+size(10px)
+		+transform(rotate(-45deg))
+		+transition(all .5s ease-in-out)
+.filter__hide
+	padding: 10px 0
+	display: none
+
+.filter__link
+	color: #858585
+// END FILTER 
+
+// BEGIN ZELECT 
+.zelect
+	margin-top: 2px
+	position: relative
+.zelected
+	background-color: #fff
+	width: 100%
+	padding: 15px 34px 15px 12px
+	font-size: 14px
+	line-height: 1
+	border: 1px solid #dbd9d7
+	position: relative
+	color: #8f8f8f
+	&:after
+		content: ''
+		position: absolute
+		top: 12px
+		right: 12px
+		border-left: 1px solid #9b0303
+		border-bottom: 1px solid #9b0303
+		+size(10px)
+		+transform(rotate(-45deg))
+	&:before
+		content: ''
+		position: absolute
+		top: 5px
+		bottom: 5px
+		right: 34px
+		width: 1px
+		background-color: #dbd9d7
+.dropdown
+	background-color: #fff
+	margin-top: 3px
+	padding: 10px 0
+	position: absolute
+	left: 0
+	right: 0
+	z-index: 10
+	ol
+		padding-top: 10px
+	li
+		cursor: pointer
+		padding: 5px 15px
+		&.current
+			background-color: #9b0303
+			color: #fff
+.zearch-container
+	width: 100%
+	padding: 0 10px
+.zearch
+	width: 100%
+	padding: 5px 5px
+	border: 1px solid #dbd9d7
+.no-results
+	padding-top: 10px
+// END ZELECT 
+
+
+// BEGIN PRODUCT-CARDS 
+.product-cards__list
+	background-color: #fff
+	+clearfix
+	position: relative
+.product-card
+	float: left
+	width: 50%
+	border-bottom: 1px solid #f2f4f5
+	background-color: #fff
+	padding: 10px 8px 30px
+	position: relative
+	&:nth-child(2n)
+		border-left: 1px solid #f2f4f5
+.product-card__preview
+	width: 100%
+	height: 135px
+	border: 1px solid #ececec
+	position: relative
+.product-card__pic
+	position: absolute
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	margin: auto
+	max-width: 100%
+	max-height: 100%
+.product-card__content
+	padding-top: 5px
+.product-card__name
+	font-size: 16px
+	line-height: 16px
+	color: #c60404
+.product-card__desc
+	margin-top: 2px
+	font-size: 12px
+	color: #797979
+	line-height: 1.1
+.product-card__price
+	margin-top: 10px
+	font-size: 16px
+	line-height: 16px
+	color: #c60404
+.product-card__size-list
+	margin-top: 3px
+.product-card__size
+	display: inline-block
+	margin-left: 8px
+	font-size: 14px
+	color: #797979
+	&:first-child
+		margin-left: 0
+.product-card__icons
+	position: absolute
+	right: 10px
+	left: 10px
+	bottom: 0
+	padding-top: 5px
+	+clearfix
+.product-card__basket
+	float: left
+	width: 50%
+	text-align-last: auto
+.product-card__like
+	float: left
+	width: 50%
+	text-align: right
+.product-card__icon-link
+	display: block
+
+.product-cards__still
+	margin-top: 3px
+	display: block
+	text-align: center
+	background-color: #e9e9e9
+	border: 1px solid #d4d4d4
+	font-size: 16px
+	color: #1c1c1c
+	text-decoration: none
+	padding: 15px 0
+	&:hover
+		background-color: #d4d4d4
+// END PRODUCT-CARDS 
+
+// BEGIN GUARANTEES 
+.guarantees
+	p
+		margin: 15px 0
+		font-size: 14px
+		line-height: 1.2
+	strong
+		font-weight: bold
+	h2
+		font-size: 14px
+		color: #9b0303
+		font-weight: bold
+.guarantees__list
+	background-color: #fff
+	+clearfix
+.guarantees__item
+	float: left
+	width: 50%
+	border-bottom: 1px solid #f2f4f5
+	background-color: #fff
+	padding: 10px 8px
+	position: relative
+	&:nth-child(2n)
+		border-left: 1px solid #f2f4f5
+.guarantees__link
+	position: absolute
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	z-index: 10
+	display: block
+
+.guarantees__preview
+	width: 100%
+	height: 190px
+	border: 1px solid #ececec
+	position: relative
+.guarantees__pic
+	position: absolute
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	margin: auto
+	max-width: 100%
+	max-height: 100%
+.guarantees__title
+	font-size: 14px
+	line-height: 1.2
+	color: #c60404
+	text-align: center
+	margin-top: 8px
+// END GUARANTEES 
+
+// BEGIN ACTIONS 
+.actions
+	position: relative
+	height: 185px
+.actions__preview
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	bottom: 40px
+	background-position: 50% 50%
+	background-repeat: no-repeat
+	background-size: contain
+.actions__timer
+	position: absolute
+	left: 0
+	right: 0
+	bottom: 0
+	background-color: #1c1c1c
+	font-size: 16px
+	line-height: 1
+	@extend %regular
+	color: #fff
+	padding: 15px 0 12px
+// END ACTIONS 
+
+// BEGIN PRODUCTS-CART 
+.products-cart__title
+	font-size: 20px
+	color: #2c2c2c
+	margin-bottom: 5px
+.product-card-cart
+	position: relative
+	padding: 9px 8px 9px 40%
+	min-height: 120px
+	background-color: #fff
+	border-bottom: 1px solid #f0f0f0
+.product-card-cart__remove
+	position: absolute
+	top: 5px
+	right: 5px
+	display: block
+.product-card-cart__img
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	margin: auto
+	max-width: 100%
+	max-height: 100%
+.product-card-cart__preview
+	position: absolute
+	left: 8px
+	top: 9px
+	bottom: 9px
+	width: 33%
+	border: 1px solid #f0f0f0
+.product-card-cart__title
+	font-size: 16px
+	line-height: 1
+	color: #c60404
+.product-card-cart__desc
+	font-size: 12px
+	line-height: 1.2
+	color: #797979
+.product-card-cart__price
+	margin-top: 7px
+	font-size: 16px
+	line-height: 1
+	color: #c60404
+// END PRODUCTS-CART 
+
+
+// BEGIN PROMOCODE 
+.promocode
+	margin-top: 50px
+	+clearfix
+.promocode__input
+	float: left
+	width: 55%
+.promocode__btn-wrap
+	float: left
+	width: 45%
+.promocode__btn
+	@extend %regular
+	font-size: 17px
+	height: 44px
+	line-height: 44px
+// END PROMOCODE 
+
+// BEGIN INTOTAL 
+.intotal
+	margin-top: 23px
+	font-size: 20px
+	line-height: 24px
+	color: #2c2c2c
+// END INTOTAL 
+
+// BEGIN YOURDATA 
+.yourdata
+	.checkbox-container
+		margin: 0
+	.checkbox__label
+		color: #1c1c1c
+.yourdata__title
+	font-size: 20px
+	color: #2c2c2c
+	margin: 30px 0 10px
+.yourdata__radio-container
+	margin-top: 10px
+	position: relative
+	padding-left: 30px
+.yourdata__radio
+	position: absolute
+	top: 5px
+	left: 3px
+.radio__label
+	font-size: 14px
+	color: #1c1c1c
+	&.t-red2
+		@extend .t-red2
+.radio__desc
+	font-size: 14px
+	color: #929292
+
+.yourdata__btn
+	margin: 10px 0 20px
+	height: 80px
+	line-height: 80px
+	padding: 0 70px
+	font-size: 17px
+	@extend %regular
+// END YOURDATA 
+
+// BEGIN SELECT-NICE 
+.select-nice
+	background-color: #fff
+	border: 1px solid #dbd9d7
+	border-radius: 0
+	float: none
+	&:after
+		border-width: 1px
+		border-color: #9b0303
+		+size(10px)
+		margin-top: -7px
+	&:before
+		content: ''
+		position: absolute
+		top: 5px
+		bottom: 5px
+		right: 32px
+		width: 1px
+		background-color: #dbd9d7
+	.current
+		font-size: 16px
+		color: #333
+	.list
+		border-radius: 0
+// END SELECT-NICE 
 
 //ALWAYS END
 @import "_media.sass"

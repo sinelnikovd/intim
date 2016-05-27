@@ -1,0 +1,46 @@
+extends ./template/template.jade
+
+block title
+	title Гарантии
+
+block content
+	include ./template/header.jade
+	.container
+		- var backtext = "Гарантии";
+		include ./template/back.jade
+
+		// BEGIN GUARANTEES 
+		.guarantees
+			.guarantees__list
+				.guarantees__item
+					a(href="img/guarantees.jpg").guarantees__link.image-link
+					.guarantees__preview
+						img(src="img/guarantees.jpg", alt="").guarantees__pic
+					.guarantees__title Гарантия магазина
+				.guarantees__item
+					a(href="img/guarantees.jpg").guarantees__link.image-link
+					.guarantees__preview
+						img(src="img/guarantees.jpg", alt="").guarantees__pic
+					.guarantees__title Гарантия качества производителя
+				.guarantees__item
+					a(href="img/guarantees.jpg").guarantees__link.image-link
+					.guarantees__preview
+						img(src="img/guarantees.jpg", alt="").guarantees__pic
+					.guarantees__title Гарантия магазина
+				.guarantees__item
+					a(href="img/guarantees.jpg").guarantees__link.image-link
+					.guarantees__preview
+						img(src="img/guarantees.jpg", alt="").guarantees__pic
+					.guarantees__title Гарантия качества производителя
+			.guarantees__content
+				p
+					strong Мы уверены в том, что предлагаем лучшие препараты и лучший сервис на рынке интернет-аптек препаратов для потенции. Каждому из наших покупателей мы предоставляем гарантии:
+				br
+				h2 1. Гарантия качества
+				p Мы ценим свою репутацию и доверие со стороны каждого покупателя, поэтому любой препарат, продающийся в нашей аптеке прошел надлежащий контроль качества, поэтому мы полностью исключаем попадание к покупателю товара несоответствующего заявленному качеству или сроку годности. Мы уверены в качестве каждой таблетки, поэтому мы гарантирует Вам возврат денег в случае, если Вы решите вернуть товар!
+		// END GUARANTEES 
+
+
+
+	include ./template/full-site.jade
+	include ./template/footer.jade

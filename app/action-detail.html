@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Ваш отзыв</title>
+    <title>Название акции</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
     <link rel="stylesheet" href="_main.min.css">
@@ -96,56 +96,166 @@
     <!-- END HEADER -->
     <div class="container">
       <!-- BEGIN BACK -->
-      <div class="back"><a href="#" class="back__link"><span class="back__text">Ваш отзыв</span></a></div>
+      <div class="back"><a href="#" class="back__link"><span class="back__text">Название акции</span></a></div>
       <!-- END BACK -->
-      <!-- BEGIN FORM -->
-      <form action="/" class="form">
-        <div class="form__line">
-          <label for="name" class="label">Имя</label>
-          <input type="text" id="name" class="input">
+    </div>
+    <!-- BEGIN ACTIONS -->
+    <div class="actions"><a href="#" class="actions__link"></a>
+      <div style="background-image: url('img/actions.jpg')" class="actions__preview"></div>
+      <div class="actions__timer">
+        <div class="container">
+          <div data-endtime="2016/06/25 12:00" class="timer"></div>
         </div>
-        <div class="form__line">
-          <label for="email" class="label">E-mail</label>
-          <input type="email" id="email" class="input">
+      </div>
+    </div>
+    <!-- END ACTIONS -->
+    <div class="container">
+      <!-- BEGIN FILTER -->
+      <div class="filter">
+        <div class="filter__top-line">Фильтры</div>
+        <div class="filter__hide">
+          <form action="/" class="form">
+            <div class="form__line">
+              <label for="login" class="label">Цвет</label>
+              <select name="" class="select zelect-sel">
+                <option value="1">Все цвета</option>
+                <option value="1">Синий</option>
+                <option value="1">Зеленый</option>
+                <option value="1">Черный</option>
+              </select>
+            </div>
+            <div class="form__line">
+              <label for="login" class="label">Материал</label>
+              <select name="" class="select zelect-sel">
+                <option value="1">Все материалы</option>
+                <option value="1">Синий</option>
+                <option value="1">Зеленый</option>
+                <option value="1">Черный</option>
+              </select>
+            </div>
+            <div class="form__line">
+              <label for="login" class="label">Производитель</label>
+              <select name="" class="select zelect-sel">
+                <option value="1">Все производители</option>
+                <option value="1">Синий</option>
+                <option value="1">Зеленый</option>
+                <option value="1">Черный</option>
+              </select>
+            </div>
+            <div class="form__line">
+              <label for="login" class="label">Размер</label>
+              <select name="" class="select zelect-sel">
+                <option value="1">Все размеры</option>
+                <option value="1">Синий</option>
+                <option value="1">Зеленый</option>
+                <option value="1">Черный</option>
+              </select>
+            </div>
+            <div class="form__line">
+              <label for="login" class="label">Бренды</label>
+              <select name="" class="select zelect-sel">
+                <option value="1">Все бренды</option>
+                <option value="1">Синий</option>
+                <option value="1">Зеленый</option>
+                <option value="1">Черный</option>
+              </select>
+            </div>
+          </form>
+          <div class="filter__remove">
+            <div class="link-container"><a href="#" class="filter__link">Сбросить</a></div>
+          </div>
         </div>
-        <div class="form__line">
-          <label for="true" class="label">Достоинства</label>
-          <textarea name="" rows="4" id="true" class="textarea"></textarea>
-        </div>
-        <div class="form__line">
-          <label for="false" class="label">Недостатки</label>
-          <textarea name="" rows="4" id="false" class="textarea"></textarea>
-        </div>
-        <div class="form__line">
-          <label for="msg" class="label">Комментарий</label>
-          <textarea name="" rows="4" id="msg" class="textarea"></textarea>
-        </div>
-        <div class="form__line">
-          <div class="evaluation">
-            <div class="evaluation__text">Оцените пожалуйста <br>по пятибальной шкале</div>
-            <div class="evaluation__stars">
-              <fieldset>
-                <input type="radio" name="rating" value="5" id="star5">
-                <label for="star5" title="Outstanding">5 stars</label>
-                <input type="radio" name="rating" value="4" id="star4">
-                <label for="star4" title="Very Good">4 stars</label>
-                <input type="radio" name="rating" value="3" id="star3">
-                <label for="star3" title="Good">3 stars</label>
-                <input type="radio" name="rating" value="2" id="star2">
-                <label for="star2" title="Poor">2 stars</label>
-                <input type="radio" name="rating" value="1" id="star1">
-                <label for="star1" title="Very Poor">1 star</label>
-              </fieldset>
+      </div>
+      <!-- END FILTER -->
+      <!-- BEGIN PRODUCT-CARDS -->
+      <div class="product-cards">
+        <div class="product-cards__list">
+          <!-- BEGIN PRODUCT-CARD -->
+          <div class="product-card">
+            <div class="product-card__preview"><img src="img/product-card.jpg" alt="" class="product-card__pic"></div>
+            <div class="product-card__content">
+              <div class="product-card__name">Viamax Maximum </div>
+              <div class="product-card__desc">Натуральный гель, усиливающий эрекцию Далеко-далеко за словесными.</div>
+              <div class="product-card__price">2799 р.</div>
+              <ul class="product-card__size-list">
+                <li class="product-card__size">S</li>
+                <li class="product-card__size">M</li>
+                <li class="product-card__size">L</li>
+                <li class="product-card__size">XL</li>
+              </ul>
+              <div class="product-card__icons">
+                <div class="product-card__basket"><a href="#" class="product-card__icon-link"><i class="icon icon_add_cart"></i></a></div>
+                <div class="product-card__like"><a href="#" class="product-card__icon-link"><i class="icon icon_favorite"></i></a></div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="form__line">
-          <div class="btn-container">
-            <button type="submit" class="btn btn_100 btn_red">Отправить отзыв</button>
+          <!-- END PRODUCT-CARD -->
+          <!-- BEGIN PRODUCT-CARD -->
+          <div class="product-card">
+            <div class="product-card__preview"><img src="img/product-card.jpg" alt="" class="product-card__pic"></div>
+            <div class="product-card__content">
+              <div class="product-card__name">Viamax Maximum </div>
+              <div class="product-card__desc">Натуральный гель, усиливающий эрекцию</div>
+              <div class="product-card__price">2799 р.</div>
+              <ul class="product-card__size-list">
+                <li class="product-card__size">S</li>
+                <li class="product-card__size">M</li>
+                <li class="product-card__size">L</li>
+                <li class="product-card__size">XL</li>
+              </ul>
+              <div class="product-card__icons">
+                <div class="product-card__basket"><a href="#" class="product-card__icon-link"><i class="icon icon_add_cart"></i></a></div>
+                <div class="product-card__like"><a href="#" class="product-card__icon-link"><i class="icon icon_favorite"></i></a></div>
+              </div>
+            </div>
           </div>
-        </div>
-      </form>
-      <!-- END FORM -->
+          <!-- END PRODUCT-CARD -->
+          <!-- BEGIN PRODUCT-CARD -->
+          <div class="product-card">
+            <div class="product-card__preview"><img src="img/product-card.jpg" alt="" class="product-card__pic"></div>
+            <div class="product-card__content">
+              <div class="product-card__name">Viamax Maximum </div>
+              <div class="product-card__desc">Натуральный гель, усиливающий эрекцию</div>
+              <div class="product-card__price">2799 р.</div>
+              <ul class="product-card__size-list">
+                <li class="product-card__size">S</li>
+                <li class="product-card__size">M</li>
+                <li class="product-card__size">L</li>
+                <li class="product-card__size">XL</li>
+              </ul>
+              <div class="product-card__icons">
+                <div class="product-card__basket"><a href="#" class="product-card__icon-link"><i class="icon icon_add_cart"></i></a></div>
+                <div class="product-card__like"><a href="#" class="product-card__icon-link"><i class="icon icon_favorite"></i></a></div>
+              </div>
+            </div>
+          </div>
+          <!-- END PRODUCT-CARD -->
+          
+          <!-- BEGIN PRODUCT-CARD -->
+          <div class="product-card">
+            <div class="product-card__preview"><img src="img/product-card.jpg" alt="" class="product-card__pic"></div>
+            <div class="product-card__content">
+              <div class="product-card__name">Viamax Maximum </div>
+              <div class="product-card__desc">Натуральный гель, усиливающий эрекцию</div>
+              <div class="product-card__price">2799 р.</div>
+              <ul class="product-card__size-list">
+                <li class="product-card__size">S</li>
+                <li class="product-card__size">M</li>
+                <li class="product-card__size">L</li>
+                <li class="product-card__size">XL</li>
+              </ul>
+              <div class="product-card__icons">
+                <div class="product-card__basket"><a href="#" class="product-card__icon-link"><i class="icon icon_add_cart"></i></a></div>
+                <div class="product-card__like"><a href="#" class="product-card__icon-link"><i class="icon icon_favorite"></i></a></div>
+              </div>
+            </div>
+          </div>
+          <!-- END PRODUCT-CARD -->
+          
+          
+        </div><a href="#" class="product-cards__still">следуюжщие 20 товаров</a>
+      </div>
+      <!-- END PRODUCT-CARDS -->
     </div>
     <!-- BEGIN FULL-SITE -->
     <div class="full-site">

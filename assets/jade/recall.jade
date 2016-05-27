@@ -1,0 +1,75 @@
+extends ./template/template.jade
+
+block title
+	title Отзывы
+
+block content
+	include ./template/header.jade
+	.container
+		- var backtext = "Отзывы";
+		include ./template/back.jade
+
+		// BEGIN RECALL 
+		.recall
+			a(href="#").btn.btn_red.btn_100 Написать отзыв
+			ul.recall__list
+				// BEGIN RECALL__ITEM 
+				li.recall__item
+					.recall__name Света
+					.hr.hr_gray2
+					.recall__stars
+						span.recall__star.active
+						span.recall__star.active
+						span.recall__star.active
+						span.recall__star.active
+						span.recall__star
+					dl.recall__content
+						dt.recall__term Достоинства: 
+						dd.recall__desc Доставили быстро. Цена "вкусная".
+						dt.recall__term Недостатки: 
+						dd.recall__desc Некоторый товар на витрине плохо виден
+						dt.recall__term Комментарий: 
+						dd.recall__desc Итак, вторник: приходит, значит, курьер, вызывают меня на ресепшен. Мальчик оказался догадливым и не стал кричать на весь офис: "Девушка, девушка
+				// END RECALL__ITEM 
+				// BEGIN RECALL__ITEM 
+				li.recall__item
+					.recall__name Света
+					.hr.hr_gray2
+					.recall__stars
+						span.recall__star.active
+						span.recall__star.active
+						span.recall__star.active
+						span.recall__star.active
+						span.recall__star
+					dl.recall__content
+						dt.recall__term Достоинства: 
+						dd.recall__desc Доставили быстро. Цена "вкусная".
+						dt.recall__term Недостатки: 
+						dd.recall__desc Некоторый товар на витрине плохо виден
+						dt.recall__term Комментарий: 
+						dd.recall__desc Итак, вторник: приходит, значит, курьер, вызывают меня на ресепшен. Мальчик оказался догадливым и не стал кричать на весь офис: "Девушка, девушка
+				// END RECALL__ITEM 
+				// BEGIN RECALL__ITEM 
+				li.recall__item
+					.recall__name Света
+					.hr.hr_gray2
+					.recall__stars
+						span.recall__star.active
+						span.recall__star.active
+						span.recall__star.active
+						span.recall__star.active
+						span.recall__star
+					dl.recall__content
+						dt.recall__term Достоинства: 
+						dd.recall__desc Доставили быстро. Цена "вкусная".
+						dt.recall__term Недостатки: 
+						dd.recall__desc Некоторый товар на витрине плохо виден
+						dt.recall__term Комментарий: 
+						dd.recall__desc Итак, вторник: приходит, значит, курьер, вызывают меня на ресепшен. Мальчик оказался догадливым и не стал кричать на весь офис: "Девушка, девушка
+				// END RECALL__ITEM 
+		// END RECALL 
+
+		include ./template/pagination.jade
+
+	include ./template/full-site.jade
+	include ./template/footer.jade

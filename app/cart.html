@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Ваш отзыв</title>
+    <title>Корзина</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
     <link rel="stylesheet" href="_main.min.css">
@@ -96,56 +96,145 @@
     <!-- END HEADER -->
     <div class="container">
       <!-- BEGIN BACK -->
-      <div class="back"><a href="#" class="back__link"><span class="back__text">Ваш отзыв</span></a></div>
+      <div class="back"><a href="#" class="back__link back__link_no_arrow"><span class="back__text">Корзина</span></a></div>
       <!-- END BACK -->
-      <!-- BEGIN FORM -->
-      <form action="/" class="form">
-        <div class="form__line">
-          <label for="name" class="label">Имя</label>
-          <input type="text" id="name" class="input">
+      
+      <div class="products-cart">
+        <div class="products-cart__title">В вашей корзине <span class="product-cart-count">3</span> товара</div>
+        <!-- BEGIN PRODUCT-CARD-CART -->
+        <div class="product-card-cart"><a href="javascript:;" class="product-card-cart__remove"><i class="icon icon_remove"></i></a>
+          <div class="product-card-cart__preview"><img src="img/product-card.jpg" alt="" class="product-card-cart__img"></div>
+          <div class="product-card-cart__content">
+            <div class="product-card-cart__title">Viamax Maximum </div>
+            <div class="product-card-cart__desc">Натуральный гель, усиливающий эрекцию</div>
+            <div class="product-card-cart__price">2799 р.</div>
+          </div>
         </div>
-        <div class="form__line">
-          <label for="email" class="label">E-mail</label>
-          <input type="email" id="email" class="input">
+        <!-- END PRODUCT-CARD-CART -->
+        <!-- BEGIN PRODUCT-CARD-CART -->
+        <div class="product-card-cart"><a href="javascript:;" class="product-card-cart__remove"><i class="icon icon_remove"></i></a>
+          <div class="product-card-cart__preview"><img src="img/product-card.jpg" alt="" class="product-card-cart__img"></div>
+          <div class="product-card-cart__content">
+            <div class="product-card-cart__title">Viamax Maximum </div>
+            <div class="product-card-cart__desc">Натуральный гель, усиливающий эрекцию</div>
+            <div class="product-card-cart__price">2799 р.</div>
+          </div>
         </div>
-        <div class="form__line">
-          <label for="true" class="label">Достоинства</label>
-          <textarea name="" rows="4" id="true" class="textarea"></textarea>
+        <!-- END PRODUCT-CARD-CART -->
+        <!-- BEGIN PRODUCT-CARD-CART -->
+        <div class="product-card-cart"><a href="javascript:;" class="product-card-cart__remove"><i class="icon icon_remove"></i></a>
+          <div class="product-card-cart__preview"><img src="img/product-card.jpg" alt="" class="product-card-cart__img"></div>
+          <div class="product-card-cart__content">
+            <div class="product-card-cart__title">Viamax Maximum </div>
+            <div class="product-card-cart__desc">Натуральный гель, усиливающий эрекцию</div>
+            <div class="product-card-cart__price">2799 р.</div>
+          </div>
         </div>
-        <div class="form__line">
-          <label for="false" class="label">Недостатки</label>
-          <textarea name="" rows="4" id="false" class="textarea"></textarea>
-        </div>
-        <div class="form__line">
-          <label for="msg" class="label">Комментарий</label>
-          <textarea name="" rows="4" id="msg" class="textarea"></textarea>
-        </div>
-        <div class="form__line">
-          <div class="evaluation">
-            <div class="evaluation__text">Оцените пожалуйста <br>по пятибальной шкале</div>
-            <div class="evaluation__stars">
-              <fieldset>
-                <input type="radio" name="rating" value="5" id="star5">
-                <label for="star5" title="Outstanding">5 stars</label>
-                <input type="radio" name="rating" value="4" id="star4">
-                <label for="star4" title="Very Good">4 stars</label>
-                <input type="radio" name="rating" value="3" id="star3">
-                <label for="star3" title="Good">3 stars</label>
-                <input type="radio" name="rating" value="2" id="star2">
-                <label for="star2" title="Poor">2 stars</label>
-                <input type="radio" name="rating" value="1" id="star1">
-                <label for="star1" title="Very Poor">1 star</label>
-              </fieldset>
+        <!-- END PRODUCT-CARD-CART -->
+        
+      </div>
+      <!-- BEGIN PROMOCODE -->
+      <div class="promocode">
+        <form action="/" class="form">
+          <div class="form__line">
+            <label for="login" class="label">Промо-код</label>
+            <div class="promocode__input">
+              <input type="text" id="login" class="input">
+            </div>
+            <div class="promocode__btn-wrap">
+              <button type="submit" class="btn btn_red btn_100 promocode__btn">Применить</button>
             </div>
           </div>
-        </div>
-        <div class="form__line">
-          <div class="btn-container">
-            <button type="submit" class="btn btn_100 btn_red">Отправить отзыв</button>
+        </form>
+      </div>
+      <!-- END PROMOCODE -->
+      <!-- BEGIN INTOTAL -->
+      <div class="intotal">Итого: <br><span class="product-cart-count t-red2">3</span> товара на сумму <br><span class="product-cart-price t-red2">8 450</span> руб.</div>
+      <!-- END INTOTAL -->
+      <!-- BEGIN YOURDATA -->
+      <div class="yourdata">
+        <div class="yourdata__title">Ваши данные</div>
+        <!-- BEGIN FORM -->
+        <form action="/" class="form form_auth">
+          <div class="form__line">
+            <label for="name" class="label">Имя</label>
+            <input type="text" id="name" class="input">
           </div>
-        </div>
-      </form>
-      <!-- END FORM -->
+          <div class="form__line">
+            <label for="tel" class="label">Номер телефона*</label>
+            <input type="tel" id="tel" class="input data-inputmask">
+          </div>
+          <div class="form__line">
+            <label for="addres" class="label">Адрес доставки*</label>
+            <input type="text" id="addres" class="input">
+          </div>
+          <div class="form__line">
+            <label for="email" class="label">Электронная почта*</label>
+            <input type="email" id="email" class="input">
+          </div>
+          <div class="form__line">
+            <label for="msg" class="label">Комментарий</label>
+            <textarea name="" rows="4" id="msg" class="textarea"></textarea>
+          </div>
+          <div class="form__line">
+            <div class="checkbox-container">
+              <input type="checkbox" checked="checked" id="recall" class="checkbox">
+              <label for="recall" class="checkbox__label">Не перезванивать</label>
+            </div>
+            <div class="checkbox-container">
+              <input type="checkbox" checked="checked" id="news" class="checkbox">
+              <label for="news" class="checkbox__label">Подписаться на новости</label>
+            </div>
+          </div>
+          <div class="yourdata__title">Способ доставки</div>
+          <div class="form__line">
+            <div class="yourdata__radio-container">
+              <input type="radio" checked="checked" id="postru" class="radio yourdata__radio">
+              <label for="postru" class="radio__label">Почта России</label>
+              <div class="radio__desc">Бесплатно, 10-20 дней после комплектации</div>
+            </div>
+          </div>
+          <div class="form__line">
+            <div class="yourdata__radio-container">
+              <input type="radio" checked="checked" id="postru" class="radio yourdata__radio">
+              <label for="postru" class="radio__label">Самовывоз с ул. Правды 24, стр 5</label>
+              <div class="radio__desc">Бесплатно, в день комплектации заказа</div>
+            </div>
+          </div>
+          <div class="form__line">
+            <div class="yourdata__radio-container">
+              <input type="radio" checked="checked" id="postru" class="radio yourdata__radio">
+              <label for="postru" class="radio__label t-red2">Быстрая доставка в ближайший пункт самовывоза</label>
+              <div class="radio__desc">Бесплатно, 1-2 дня после отправки</div>
+            </div>
+          </div>
+          <div class="form__line">
+            <div class="yourdata__radio-container">
+              <input type="radio" checked="checked" id="postru" class="radio yourdata__radio">
+              <label for="postru" class="radio__label">Курьер</label>
+              <div class="radio__desc">Бесплатно, в день комплектации заказа</div>
+            </div>
+          </div>
+          <div class="yourdata__title">Оплата</div>
+          <div class="form__line">
+            <select name="payment" class="select-nice wide">
+              <option value="1">Банковская карта</option>
+              <option value="1">Банковская карта</option>
+              <option value="1">Банковская карта</option>
+            </select>
+          </div>
+          <div class="form__line">
+            <div class="btn-container">
+              <button type="submit" class="btn btn_red yourdata__btn">Отправить заказ</button>
+            </div>
+          </div>
+          <div class="form__line">
+            <div class="btn-container"><a href="#" class="btn btn_gray btn_psdding-big">Назад</a></div>
+          </div>
+        </form>
+        <!-- END FORM -->
+      </div>
+      <!-- END YOURDATA -->
     </div>
     <!-- BEGIN FULL-SITE -->
     <div class="full-site">

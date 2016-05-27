@@ -1,0 +1,17 @@
+extends ./template/template.jade
+
+block title
+	title Вибраторы
+
+block content
+	include ./template/header.jade
+	.container
+		- var backtext = "Вибраторы";
+		include ./template/back.jade
+
+
+		include ./template/filter.jade
+		include ./template/product-cards.jade
+
+	include ./template/full-site.jade
+	include ./template/footer.jade

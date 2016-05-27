@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Ваш отзыв</title>
+    <title>Отзывы</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
     <link rel="stylesheet" href="_main.min.css">
@@ -96,56 +96,72 @@
     <!-- END HEADER -->
     <div class="container">
       <!-- BEGIN BACK -->
-      <div class="back"><a href="#" class="back__link"><span class="back__text">Ваш отзыв</span></a></div>
+      <div class="back"><a href="#" class="back__link"><span class="back__text">Отзывы</span></a></div>
       <!-- END BACK -->
-      <!-- BEGIN FORM -->
-      <form action="/" class="form">
-        <div class="form__line">
-          <label for="name" class="label">Имя</label>
-          <input type="text" id="name" class="input">
-        </div>
-        <div class="form__line">
-          <label for="email" class="label">E-mail</label>
-          <input type="email" id="email" class="input">
-        </div>
-        <div class="form__line">
-          <label for="true" class="label">Достоинства</label>
-          <textarea name="" rows="4" id="true" class="textarea"></textarea>
-        </div>
-        <div class="form__line">
-          <label for="false" class="label">Недостатки</label>
-          <textarea name="" rows="4" id="false" class="textarea"></textarea>
-        </div>
-        <div class="form__line">
-          <label for="msg" class="label">Комментарий</label>
-          <textarea name="" rows="4" id="msg" class="textarea"></textarea>
-        </div>
-        <div class="form__line">
-          <div class="evaluation">
-            <div class="evaluation__text">Оцените пожалуйста <br>по пятибальной шкале</div>
-            <div class="evaluation__stars">
-              <fieldset>
-                <input type="radio" name="rating" value="5" id="star5">
-                <label for="star5" title="Outstanding">5 stars</label>
-                <input type="radio" name="rating" value="4" id="star4">
-                <label for="star4" title="Very Good">4 stars</label>
-                <input type="radio" name="rating" value="3" id="star3">
-                <label for="star3" title="Good">3 stars</label>
-                <input type="radio" name="rating" value="2" id="star2">
-                <label for="star2" title="Poor">2 stars</label>
-                <input type="radio" name="rating" value="1" id="star1">
-                <label for="star1" title="Very Poor">1 star</label>
-              </fieldset>
-            </div>
-          </div>
-        </div>
-        <div class="form__line">
-          <div class="btn-container">
-            <button type="submit" class="btn btn_100 btn_red">Отправить отзыв</button>
-          </div>
-        </div>
-      </form>
-      <!-- END FORM -->
+      <!-- BEGIN RECALL -->
+      <div class="recall"><a href="#" class="btn btn_red btn_100">Написать отзыв</a>
+        <ul class="recall__list">
+          <!-- BEGIN RECALL__ITEM -->
+          <li class="recall__item">
+            <div class="recall__name">Света</div>
+            <div class="hr hr_gray2"></div>
+            <div class="recall__stars"><span class="recall__star active"></span><span class="recall__star active"></span><span class="recall__star active"></span><span class="recall__star active"></span><span class="recall__star"></span></div>
+            <dl class="recall__content">
+              <dt class="recall__term">Достоинства: </dt>
+              <dd class="recall__desc">Доставили быстро. Цена "вкусная".</dd>
+              <dt class="recall__term">Недостатки: </dt>
+              <dd class="recall__desc">Некоторый товар на витрине плохо виден</dd>
+              <dt class="recall__term">Комментарий: </dt>
+              <dd class="recall__desc">Итак, вторник: приходит, значит, курьер, вызывают меня на ресепшен. Мальчик оказался догадливым и не стал кричать на весь офис: "Девушка, девушка</dd>
+            </dl>
+          </li>
+          <!-- END RECALL__ITEM -->
+          <!-- BEGIN RECALL__ITEM -->
+          <li class="recall__item">
+            <div class="recall__name">Света</div>
+            <div class="hr hr_gray2"></div>
+            <div class="recall__stars"><span class="recall__star active"></span><span class="recall__star active"></span><span class="recall__star active"></span><span class="recall__star active"></span><span class="recall__star"></span></div>
+            <dl class="recall__content">
+              <dt class="recall__term">Достоинства: </dt>
+              <dd class="recall__desc">Доставили быстро. Цена "вкусная".</dd>
+              <dt class="recall__term">Недостатки: </dt>
+              <dd class="recall__desc">Некоторый товар на витрине плохо виден</dd>
+              <dt class="recall__term">Комментарий: </dt>
+              <dd class="recall__desc">Итак, вторник: приходит, значит, курьер, вызывают меня на ресепшен. Мальчик оказался догадливым и не стал кричать на весь офис: "Девушка, девушка</dd>
+            </dl>
+          </li>
+          <!-- END RECALL__ITEM -->
+          <!-- BEGIN RECALL__ITEM -->
+          <li class="recall__item">
+            <div class="recall__name">Света</div>
+            <div class="hr hr_gray2"></div>
+            <div class="recall__stars"><span class="recall__star active"></span><span class="recall__star active"></span><span class="recall__star active"></span><span class="recall__star active"></span><span class="recall__star"></span></div>
+            <dl class="recall__content">
+              <dt class="recall__term">Достоинства: </dt>
+              <dd class="recall__desc">Доставили быстро. Цена "вкусная".</dd>
+              <dt class="recall__term">Недостатки: </dt>
+              <dd class="recall__desc">Некоторый товар на витрине плохо виден</dd>
+              <dt class="recall__term">Комментарий: </dt>
+              <dd class="recall__desc">Итак, вторник: приходит, значит, курьер, вызывают меня на ресепшен. Мальчик оказался догадливым и не стал кричать на весь офис: "Девушка, девушка</dd>
+            </dl>
+          </li>
+          <!-- END RECALL__ITEM -->
+        </ul>
+      </div>
+      <!-- END RECALL -->
+      <!-- BEGIN PAGINATION -->
+      <div class="pagination"><a href="#" class="pagination__control pagination__control_prev"><i class="icon icon_p_prev"></i></a>
+        <ul class="pagination__list">
+          <li class="pagination__item"><a href="#" class="pagination__link">1</a></li>
+          <li class="pagination__item"><a href="#" class="pagination__link">2</a></li>
+          <li class="pagination__item"><a href="#" class="pagination__link">3</a></li>
+          <li class="pagination__item"><a href="#" class="pagination__link active">4</a></li>
+          <li class="pagination__item"><a href="#" class="pagination__link">5</a></li>
+          <li class="pagination__item">...</li>
+          <li class="pagination__item"><a href="#" class="pagination__link">275</a></li>
+        </ul><a href="#" class="pagination__control pagination__control_next"><i class="icon icon_p_next"></i></a>
+      </div>
+      <!-- END PAGINATION -->
     </div>
     <!-- BEGIN FULL-SITE -->
     <div class="full-site">

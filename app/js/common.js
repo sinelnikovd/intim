@@ -75,14 +75,88 @@ $(document).ready(function() {
 		if($(this).hasClass('active')){
 			$('.nav__item_sub.active').removeClass('active');
 			$(this).find('.icon-nav').slideToggle();
+			$(this).find('.sub-nav').slideToggle();
 		}else{
-			$('.nav__item_sub.active').removeClass('active').find('.icon-nav').slideToggle();
+
+			$('.nav__item_sub.active').find('.icon-nav').slideToggle();
+			$('.nav__item_sub.active').find('.sub-nav').slideToggle();
+			$('.nav__item_sub.active').removeClass('active');
 			$(this).addClass('active');
 			$(this).find('.icon-nav').slideToggle();
+			$(this).find('.sub-nav').slideToggle();
 		}
 
 		return false;
 	});
+
+
+	$('.zelect-sel').zelect({
+		noResults: function($query) {
+			return "Не найдено: "+$query;
+		}
+	});
+
+	$('.filter__top-line').click(function() {
+		$(this).closest('.filter').toggleClass('active');
+		$(this).closest('.filter').find('.filter__hide').slideToggle();
+	});
+
+	$(window).load(function () {
+		var maxg = 0;
+		$('.guarantees__item').each(function () {
+			if(maxg < $(this).height()){
+				maxg = $(this).height();
+			}
+		});
+
+		$('.guarantees__item').height(maxg);
+
+		var maxi = 0;
+		$('.product-card').each(function () {
+			if(maxi < $(this).height()){
+				maxi = $(this).height();
+			}
+		});
+
+		$('.product-card').height(maxi);
+
+	});
+
+	$(window).resize(function () {
+		var maxg = 0;
+		$('.guarantees__item').each(function () {
+			$(this).height('auto');
+			if(maxg < $(this).height()){
+				maxg = $(this).height();
+			}
+		});
+
+		$('.guarantees__item').height(maxg);
+
+		var maxi = 0;
+		$('.product-card').each(function () {
+			$(this).height('auto');
+			if(maxi < $(this).height()){
+				maxi = $(this).height();
+			}
+		});
+
+		$('.product-card').height(maxi);
+	});
+
+	$('.image-link').magnificPopup({
+		type:'image',
+	});
+
+	$('.timer').each(function() {
+		var el =  $(this),
+			elEndTime = new Date(el.data('endtime'));
+		el.countdown(elEndTime, function(event) {
+			$(this).html(event.strftime('До окончании акции %Dд %-Hч %Mмин'));
+		});
+	});
+
+	$('.select-nice').niceSelect();
 
 });
 
