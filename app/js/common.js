@@ -66,6 +66,40 @@ $(document).ready(function() {
 		videoDescCarousel.trigger('to.owl.carousel', event.page.index);
 	})
 
+
+	var detailCarousel = $('.slider-detail').owlCarousel({
+		loop: true,
+		nav: false,
+		items: 3,
+		dots: false,
+		merge:true,
+		center: true,
+	});
+
+
+	var similarCarousel = $('.carousel-product__slider').owlCarousel({
+		loop: true,
+		nav: false,
+		items: 2,
+		dots: false,
+		responsive:{
+			0:{
+				items:2,
+			},
+			480:{
+				items:3,
+			}
+		}
+	});
+	$('.carousel-product__nav_prev').click(function() {
+		$(this).closest('.carousel-product__slider-wrap').find('.carousel-product__slider').trigger('prev.owl.carousel');
+	})
+	$('.carousel-product__nav_next').click(function() {
+		$(this).closest('.carousel-product__slider-wrap').find('.carousel-product__slider').trigger('next.owl.carousel');
+	});
+
+
+
 	$('.button__link_hamburger').click(function() {
 		$('.nav').slideToggle();
 		return false;
@@ -157,6 +191,54 @@ $(document).ready(function() {
 	});
 
 	$('.select-nice').niceSelect();
+
+
+	$( ".profile-accardion" ).accordion({collapsible:true,heightStyle:"content"});
+	$( ".profile-accardion" ).accordion( "option", "icons", null );
+
+	$( ".profile-accardion" ).on( "accordionbeforeactivate", function( event, ui ) {
+		ui.newHeader.addClass("open")
+		ui.oldHeader.removeClass("open")
+	});
+
+	$('.table-size__link').click(function() {
+		$('.table-size').toggleClass('active');
+		$('.table-size__table-wrap').slideToggle();
+	});
+
+	$(window).scroll(function() {
+
+		if($(this).scrollTop() != 0) {
+			$('.to-top').fadeIn();
+		} else {
+			$('.to-top').fadeOut();
+		}
+
+	});
+
+	$('.to-top').click(function() {
+		$('body,html').animate({scrollTop:0},800);
+	});
+
+	$('.profile-btn_item').click(function (e) {
+		if(!$(this).hasClass('active')){
+			$('.profile-btn_item.active').removeClass('active');
+			$('.profile-tabs__item.active').removeClass('active');
+			$(this).addClass('active');
+			$('.profile-tabs__item').eq($(this).index()).addClass('active');
+		}
+		return false;
+	});
+
+	$('.addres__btn-item').click(function (e) {
+		if(!$(this).hasClass('active')){
+			$('.addres__btn-item.active').removeClass('active');
+			$('.addres__item.active').removeClass('active');
+			$(this).addClass('active');
+			$('.addres__item').eq($(this).index()).addClass('active');
+		}
+		return false;
+	});
 
 });
 

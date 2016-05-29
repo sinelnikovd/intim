@@ -1,0 +1,157 @@
+extends ./template/template.jade
+
+block title
+	title Чулки кружевные
+
+block content
+	include ./template/header.jade
+
+	.container
+		- var backtext = "Чулки кружевные";
+		include ./template/back.jade
+
+	// BEGIN SLIDER 
+	.slider-detail
+		.slider-detail__item( data-merge="2")
+			a(href="img/detail/1.jpg").slider-detail__link.image-link
+				img(src="img/detail/1.jpg", alt="").slider-detail__img
+		.slider-detail__item( data-merge="2")
+			a(href="img/detail/3.jpg").slider-detail__link.image-link
+				img(src="img/detail/3.jpg", alt="").slider-detail__img
+		.slider-detail__item( data-merge="2")
+			a(href="img/detail/3.jpg").slider-detail__link.image-link
+				img(src="img/detail/3.jpg", alt="").slider-detail__img
+		.slider-detail__item( data-merge="2")
+			a(href="img/detail/2.jpg").slider-detail__link.image-link
+				img(src="img/detail/2.jpg", alt="").slider-detail__img
+	// END SLIDER 
+
+	// BEGIN PRICE-DETAIL 
+	.price-detail
+		.container
+			.price-detail__old 3170 р.
+			.price-detail__new 2799 р.
+			.btn-container
+				button(type="submit").btn.btn_red Добавить в корзину
+	// END PRICE-DETAIL 
+
+	.container
+		ul.stars-detail
+			li.stars-detail__item.active
+			li.stars-detail__item.active
+			li.stars-detail__item.active
+			li.stars-detail__item
+			li.stars-detail__item
+
+		.link-container
+			a(href="#").recall-detail 3 отзыва
+
+		// BEGIN CHARACTERISTICS 
+		.characteristics
+			.characteristics_row
+				.characteristics_cell-title Бренд
+				.characteristics_cell-desc TOYFA
+			.characteristics_row
+				.characteristics_cell-title Категория
+				.characteristics_cell-desc
+					a(href="#") Аксессуары
+			.characteristics_row
+				.characteristics_cell-title Размер
+				.characteristics_cell-desc
+					ul.size
+						li.size__item S
+						li.size__item M
+						li.size__item.active L
+						li.size__item XL
+						li.size__item XXL
+						li.size__item XXXL
+			.characteristics_row
+				.characteristics_cell-title Цвет
+				.characteristics_cell-desc Черный
+			.characteristics_row
+				.characteristics_cell-title Материал
+				.characteristics_cell-desc Шелк
+			.characteristics_row
+				.characteristics_cell-title Страна-производитель
+				.characteristics_cell-desc Россия
+			.characteristics_row
+				.characteristics_cell-title Штрихкод
+				.characteristics_cell-desc 147893de
+		// END CHARACTERISTICS 
+
+		// BEGIN TABLE-SIZE 
+		.table-size
+			a(href="javascript:;").table-size__link Таблица размеров
+			.table-size__table-wrap
+				table.table-size__table
+					thead.table-size__thead
+						tr.table-size__tr
+							th.table-size__th Размер
+							td.table-size__td Обхват груди (см)
+							td.table-size__td Обхват талии (см)
+							td.table-size__td Обхват бедер (см)
+					tbody.table-size__tbody
+						tr.table-size__tr
+							th.table-size__th One Size
+							td.table-size__td 92 - 102
+							td.table-size__td 76 - 92
+							td.table-size__td 96 - 112
+						tr.table-size__tr
+							th.table-size__th S
+							td.table-size__td 92 - 102
+							td.table-size__td 76 - 92
+							td.table-size__td 96 - 112
+						tr.table-size__tr
+							th.table-size__th M
+							td.table-size__td 92 - 102
+							td.table-size__td 76 - 92
+							td.table-size__td 96 - 112
+		// END TABLE-SIZE 
+
+
+		// BEGIN DESCRIPTION-DETAIL 
+		.description-detail
+			h2 Описание
+			p Костюм из трех предметов: трусы, повязка на глаза и шлепалка. Упаковка: полноцветная коробка с еврослотом (высота: 27,75 см, ширина: 17,7 см, толщина: 2,5 см, высота еврослота: 3 см)
+		// END DESCRIPTION-DETAIL 
+
+		// BEGIN SIMILAR-PRODUCT 
+		.carousel-product
+			.carousel-product__title Похожие товары
+			.carousel-product__slider-wrap
+				.carousel-product__nav.carousel-product__nav_prev
+					i.icon.icon_prev_mini
+				.carousel-product__nav.carousel-product__nav_next
+					i.icon.icon_next_mini
+				.carousel-product__slider
+
+					include ./template/product-card.jade
+					include ./template/product-card.jade
+					include ./template/product-card.jade
+					include ./template/product-card.jade
+		// END SIMILAR-PRODUCT 
+
+		// BEGIN SIMILAR-PRODUCT 
+		.carousel-product
+			.carousel-product__title С этим товаром покупают
+			.carousel-product__slider-wrap
+				.carousel-product__nav.carousel-product__nav_prev
+					i.icon.icon_prev_mini
+				.carousel-product__nav.carousel-product__nav_next
+					i.icon.icon_next_mini
+				.carousel-product__slider
+
+					include ./template/product-card.jade
+					include ./template/product-card.jade
+					include ./template/product-card.jade
+					include ./template/product-card.jade
+
+					
+		// END SIMILAR-PRODUCT 
+
+		.btn-container
+			a(href="#").btn.btn_psdding-big.btn_red Назад
+
+
+	include ./template/full-site.jade
+	include ./template/footer.jade

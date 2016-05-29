@@ -1,0 +1,407 @@
+extends ./template/template.jade
+
+block title
+	title Личный кабинет
+
+block content
+	include ./template/header.jade
+
+	.container
+		- var backtext = "Личный кабинет";
+		include ./template/back.jade
+
+
+		// BEGIN PROFILE-BTN 
+		.profile-btn
+			a(href="javascript:;").profile-btn_item.active Профиль
+			a(href="javascript:;").profile-btn_item История покупок
+		// END PROFILE-BTN 
+
+		// BEGIN PROFILE-TABS 
+		.profile-tabs
+			.profile-tabs__item.active
+				form(action="/").form.form-profile
+					h3.form-profile__title Профиль
+					.avatar
+						.avatar__text Аватар
+						.avatar__preview
+							img(src="img/profile.jpg", alt="").avatar__img
+						button.avatar__link Добавить аватар
+							input(type="file").avatar__file
+					.form__line
+						label(for="name").label Имя
+						input(type="text")#name.input
+					.form__line
+						label(for="email").label E-mail
+						input(type="email")#email.input
+					.form__line
+						label(for="tel").label Номер телефона
+						input(type="tel")#tel.input.data-inputmask
+						.checkbox-container
+							input(type="checkbox" checked="checked")#sms.checkbox
+							label(for="sms").checkbox__label Включить СМС уведомления о состоянии заказа
+					h3.form-profile__subtitle Пароль
+					.form__line
+						label(for="pass").label Введите пароль
+						input(type="password")#pass.input
+					.form__line
+						label(for="repass").label Повторите пароль
+						input(type="password")#repass.input
+					.subscription
+						h3.form-profile__title Управление подпиской
+						.subscription__line
+							.checkbox-container
+								input(type="checkbox" checked="checked")#action.checkbox
+								label(for="action").checkbox__label Акции и скидки
+							.checkbox-container
+								input(type="checkbox" checked="checked")#new.checkbox
+								label(for="new").checkbox__label Новые поступления
+							.checkbox-container
+								input(type="checkbox" checked="checked")#spec.checkbox
+								label(for="spec").checkbox__label Специальные предложения
+							.checkbox-container
+								input(type="checkbox" checked="checked")#post.checkbox
+								label(for="post").checkbox__label Новые статьи
+					// BEGIN ADDRES 
+					.addres
+						.addres__title Адрес доставки
+						ul.addres__btn
+							li.addres__btn-item.active Адрес 1
+							li.addres__btn-item Адрес 2
+							li.addres__btn-item.addres__btn-item_add Добавить адрес
+
+						.addres__items
+							.addres__item.active
+								.form__line
+									label(for="index").label Индекс
+									input(type="text")#index.input
+								.form__line
+									label(for="region").label Область
+									input(type="text")#region.input
+								.form__line
+									label(for="city").label Город
+									input(type="text")#city.input
+								.form__line
+									label(for="street").label Улица
+									input(type="text")#street.input
+								.form__line
+									label(for="home").label Дом
+									input(type="text")#home.input
+								.form__line
+									label(for="housing").label Корпус
+									input(type="text")#housing.input
+								.form__line
+									label(for="office").label Офис
+									input(type="text")#office.input
+								.form__line
+									label(for="msg").label Комментарий по доставке
+									textarea(name="" rows="6")#msg.textarea
+							.addres__item
+								.form__line
+									label(for="index").label Индекс
+									input(type="text")#index.input
+								.form__line
+									label(for="region").label Область
+									input(type="text")#region.input
+								.form__line
+									label(for="city").label Город
+									input(type="text")#city.input
+								.form__line
+									label(for="street").label Улица
+									input(type="text")#street.input
+								.form__line
+									label(for="home").label Дом
+									input(type="text")#home.input
+								.form__line
+									label(for="housing").label Корпус
+									input(type="text")#housing.input
+								.form__line
+									label(for="office").label Офис
+									input(type="text")#office.input
+								.form__line
+									label(for="msg").label Комментарий по доставке
+									textarea(name="" rows="6")#msg.textarea
+					// END ADDRES 
+					.form__line
+						.btn-container
+							button(type="submit").btn.btn_100.btn_red Сохранить изменения
+
+			.profile-tabs__item
+				// BEGIN HISTORY 
+				.profile-accardion
+					// BEGIN ACARDION-ITEM 
+					.profile-accardion__header.open
+						.profile-accardion__info
+							.profile-accardion__order Номер заказа 12544Б 
+							.profile-accardion__date от 06.04.2016 г.
+						.profile-accardion__status
+							span.profile-accardion__status-text.t-green Доставлен
+						.profile-accardion__icon
+							i.icon.icon_accordion
+					.profile-accardion__body
+						.products-cart
+							.products-cart__title <span class="product-cart-count">3</span> товара
+							// BEGIN PRODUCT-CARD-CART 
+							.product-card-cart
+								a(href="javascript:;").product-card-cart__remove
+									i.icon.icon_remove
+								.product-card-cart__preview
+									img(src="img/product-card.jpg", alt="").product-card-cart__img
+								.product-card-cart__content
+									.product-card-cart__title Viamax Maximum 
+									.product-card-cart__desc Натуральный гель, усиливающий эрекцию
+									.product-card-cart__price 2799 р.
+							// END PRODUCT-CARD-CART 
+							// BEGIN PRODUCT-CARD-CART 
+							.product-card-cart
+								a(href="javascript:;").product-card-cart__remove
+									i.icon.icon_remove
+								.product-card-cart__preview
+									img(src="img/product-card.jpg", alt="").product-card-cart__img
+								.product-card-cart__content
+									.product-card-cart__title Viamax Maximum 
+									.product-card-cart__desc Натуральный гель, усиливающий эрекцию
+									.product-card-cart__price 2799 р.
+							// END PRODUCT-CARD-CART 
+							// BEGIN PRODUCT-CARD-CART 
+							.product-card-cart
+								a(href="javascript:;").product-card-cart__remove
+									i.icon.icon_remove
+								.product-card-cart__preview
+									img(src="img/product-card.jpg", alt="").product-card-cart__img
+								.product-card-cart__content
+									.product-card-cart__title Viamax Maximum 
+									.product-card-cart__desc Натуральный гель, усиливающий эрекцию
+									.product-card-cart__price 2799 р.
+							// END PRODUCT-CARD-CART 
+
+
+						// BEGIN INTOTAL 
+						.intotal Итого: <br><span class="product-cart-count t-red2">3</span> товара на сумму <br><span class="product-cart-price t-red2">8 450</span> руб.
+						// END INTOTAL 
+						.btn-container.profile__btn-container
+							a(href="#").btn.btn_red.btn_psdding-big Повторить заказ
+
+					// END ACARDION-ITEM 
+					// BEGIN ACARDION-ITEM 
+					.profile-accardion__header
+						.profile-accardion__info
+							.profile-accardion__order Номер заказа 12544Б 
+							.profile-accardion__date от 06.04.2016 г.
+						.profile-accardion__status
+							span.profile-accardion__status-text.t-green Доставлен
+						.profile-accardion__icon
+							i.icon.icon_accordion
+					.profile-accardion__body
+						.products-cart
+							.products-cart__title <span class="product-cart-count">3</span> товара
+							// BEGIN PRODUCT-CARD-CART 
+							.product-card-cart
+								a(href="javascript:;").product-card-cart__remove
+									i.icon.icon_remove
+								.product-card-cart__preview
+									img(src="img/product-card.jpg", alt="").product-card-cart__img
+								.product-card-cart__content
+									.product-card-cart__title Viamax Maximum 
+									.product-card-cart__desc Натуральный гель, усиливающий эрекцию
+									.product-card-cart__price 2799 р.
+							// END PRODUCT-CARD-CART 
+							// BEGIN PRODUCT-CARD-CART 
+							.product-card-cart
+								a(href="javascript:;").product-card-cart__remove
+									i.icon.icon_remove
+								.product-card-cart__preview
+									img(src="img/product-card.jpg", alt="").product-card-cart__img
+								.product-card-cart__content
+									.product-card-cart__title Viamax Maximum 
+									.product-card-cart__desc Натуральный гель, усиливающий эрекцию
+									.product-card-cart__price 2799 р.
+							// END PRODUCT-CARD-CART 
+							// BEGIN PRODUCT-CARD-CART 
+							.product-card-cart
+								a(href="javascript:;").product-card-cart__remove
+									i.icon.icon_remove
+								.product-card-cart__preview
+									img(src="img/product-card.jpg", alt="").product-card-cart__img
+								.product-card-cart__content
+									.product-card-cart__title Viamax Maximum 
+									.product-card-cart__desc Натуральный гель, усиливающий эрекцию
+									.product-card-cart__price 2799 р.
+							// END PRODUCT-CARD-CART 
+
+
+						// BEGIN INTOTAL 
+						.intotal Итого: <br><span class="product-cart-count t-red2">3</span> товара на сумму <br><span class="product-cart-price t-red2">8 450</span> руб.
+						// END INTOTAL 
+						.btn-container.profile__btn-container
+							a(href="#").btn.btn_red.btn_psdding-big Повторить заказ
+
+					// END ACARDION-ITEM 
+					// BEGIN ACARDION-ITEM 
+					.profile-accardion__header
+						.profile-accardion__info
+							.profile-accardion__order Номер заказа 12544Б 
+							.profile-accardion__date от 06.04.2016 г.
+						.profile-accardion__status
+							span.profile-accardion__status-text.t-orange В обработке
+						.profile-accardion__icon
+							i.icon.icon_accordion
+					.profile-accardion__body
+						.products-cart
+							.products-cart__title <span class="product-cart-count">3</span> товара
+							// BEGIN PRODUCT-CARD-CART 
+							.product-card-cart
+								a(href="javascript:;").product-card-cart__remove
+									i.icon.icon_remove
+								.product-card-cart__preview
+									img(src="img/product-card.jpg", alt="").product-card-cart__img
+								.product-card-cart__content
+									.product-card-cart__title Viamax Maximum 
+									.product-card-cart__desc Натуральный гель, усиливающий эрекцию
+									.product-card-cart__price 2799 р.
+							// END PRODUCT-CARD-CART 
+							// BEGIN PRODUCT-CARD-CART 
+							.product-card-cart
+								a(href="javascript:;").product-card-cart__remove
+									i.icon.icon_remove
+								.product-card-cart__preview
+									img(src="img/product-card.jpg", alt="").product-card-cart__img
+								.product-card-cart__content
+									.product-card-cart__title Viamax Maximum 
+									.product-card-cart__desc Натуральный гель, усиливающий эрекцию
+									.product-card-cart__price 2799 р.
+							// END PRODUCT-CARD-CART 
+							// BEGIN PRODUCT-CARD-CART 
+							.product-card-cart
+								a(href="javascript:;").product-card-cart__remove
+									i.icon.icon_remove
+								.product-card-cart__preview
+									img(src="img/product-card.jpg", alt="").product-card-cart__img
+								.product-card-cart__content
+									.product-card-cart__title Viamax Maximum 
+									.product-card-cart__desc Натуральный гель, усиливающий эрекцию
+									.product-card-cart__price 2799 р.
+							// END PRODUCT-CARD-CART 
+
+
+						// BEGIN INTOTAL 
+						.intotal Итого: <br><span class="product-cart-count t-red2">3</span> товара на сумму <br><span class="product-cart-price t-red2">8 450</span> руб.
+						// END INTOTAL 
+						.btn-container.profile__btn-container
+							a(href="#").btn.btn_red.btn_psdding-big Повторить заказ
+
+					// END ACARDION-ITEM 
+					// BEGIN ACARDION-ITEM 
+					.profile-accardion__header
+						.profile-accardion__info
+							.profile-accardion__order Номер заказа 12544Б 
+							.profile-accardion__date от 06.04.2016 г.
+						.profile-accardion__status
+							span.profile-accardion__status-text.t-green Доставлен
+						.profile-accardion__icon
+							i.icon.icon_accordion
+					.profile-accardion__body
+						.products-cart
+							.products-cart__title <span class="product-cart-count">3</span> товара
+							// BEGIN PRODUCT-CARD-CART 
+							.product-card-cart
+								a(href="javascript:;").product-card-cart__remove
+									i.icon.icon_remove
+								.product-card-cart__preview
+									img(src="img/product-card.jpg", alt="").product-card-cart__img
+								.product-card-cart__content
+									.product-card-cart__title Viamax Maximum 
+									.product-card-cart__desc Натуральный гель, усиливающий эрекцию
+									.product-card-cart__price 2799 р.
+							// END PRODUCT-CARD-CART 
+							// BEGIN PRODUCT-CARD-CART 
+							.product-card-cart
+								a(href="javascript:;").product-card-cart__remove
+									i.icon.icon_remove
+								.product-card-cart__preview
+									img(src="img/product-card.jpg", alt="").product-card-cart__img
+								.product-card-cart__content
+									.product-card-cart__title Viamax Maximum 
+									.product-card-cart__desc Натуральный гель, усиливающий эрекцию
+									.product-card-cart__price 2799 р.
+							// END PRODUCT-CARD-CART 
+							// BEGIN PRODUCT-CARD-CART 
+							.product-card-cart
+								a(href="javascript:;").product-card-cart__remove
+									i.icon.icon_remove
+								.product-card-cart__preview
+									img(src="img/product-card.jpg", alt="").product-card-cart__img
+								.product-card-cart__content
+									.product-card-cart__title Viamax Maximum 
+									.product-card-cart__desc Натуральный гель, усиливающий эрекцию
+									.product-card-cart__price 2799 р.
+							// END PRODUCT-CARD-CART 
+
+
+						// BEGIN INTOTAL 
+						.intotal Итого: <br><span class="product-cart-count t-red2">3</span> товара на сумму <br><span class="product-cart-price t-red2">8 450</span> руб.
+						// END INTOTAL 
+						.btn-container.profile__btn-container
+							a(href="#").btn.btn_red.btn_psdding-big Повторить заказ
+
+					// END ACARDION-ITEM 
+					// BEGIN ACARDION-ITEM 
+					.profile-accardion__header
+						.profile-accardion__info
+							.profile-accardion__order Номер заказа 12544Б 
+							.profile-accardion__date от 06.04.2016 г.
+						.profile-accardion__status
+							span.profile-accardion__status-text.t-green Доставлен
+						.profile-accardion__icon
+							i.icon.icon_accordion
+					.profile-accardion__body
+						.products-cart
+							.products-cart__title <span class="product-cart-count">3</span> товара
+							// BEGIN PRODUCT-CARD-CART 
+							.product-card-cart
+								a(href="javascript:;").product-card-cart__remove
+									i.icon.icon_remove
+								.product-card-cart__preview
+									img(src="img/product-card.jpg", alt="").product-card-cart__img
+								.product-card-cart__content
+									.product-card-cart__title Viamax Maximum 
+									.product-card-cart__desc Натуральный гель, усиливающий эрекцию
+									.product-card-cart__price 2799 р.
+							// END PRODUCT-CARD-CART 
+							// BEGIN PRODUCT-CARD-CART 
+							.product-card-cart
+								a(href="javascript:;").product-card-cart__remove
+									i.icon.icon_remove
+								.product-card-cart__preview
+									img(src="img/product-card.jpg", alt="").product-card-cart__img
+								.product-card-cart__content
+									.product-card-cart__title Viamax Maximum 
+									.product-card-cart__desc Натуральный гель, усиливающий эрекцию
+									.product-card-cart__price 2799 р.
+							// END PRODUCT-CARD-CART 
+							// BEGIN PRODUCT-CARD-CART 
+							.product-card-cart
+								a(href="javascript:;").product-card-cart__remove
+									i.icon.icon_remove
+								.product-card-cart__preview
+									img(src="img/product-card.jpg", alt="").product-card-cart__img
+								.product-card-cart__content
+									.product-card-cart__title Viamax Maximum 
+									.product-card-cart__desc Натуральный гель, усиливающий эрекцию
+									.product-card-cart__price 2799 р.
+							// END PRODUCT-CARD-CART 
+
+
+						// BEGIN INTOTAL 
+						.intotal Итого: <br><span class="product-cart-count t-red2">3</span> товара на сумму <br><span class="product-cart-price t-red2">8 450</span> руб.
+						// END INTOTAL 
+						.btn-container.profile__btn-container
+							a(href="#").btn.btn_red.btn_psdding-big Повторить заказ
+
+					// END ACARDION-ITEM 
+				// END HISTORY 
+		// END PROFILE-TABS 
+
+
+	include ./template/full-site.jade
+	include ./template/footer.jade
